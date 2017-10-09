@@ -1,0 +1,87 @@
+html, body{
+	margin:0;
+	padding:0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: blue;
+}
+#about{
+	float:right;
+}
+li.menu {
+    float: left;
+}
+a.about:hover{
+	
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+	margin:0;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+span.steps{
+	display:block;
+	float:right;
+}
+
+ul.graph-container{
+    margin-left:auto;
+    margin-right:auto;
+	text-align: center;
+}
+
+h1 { 
+	padding-left: 10%;
+}
+
+h3 { 
+	padding-left: 10%;
+}
+
+/* */
+div.content{
+	margin-left: auto;
+    margin-right: auto;
+	width: 100%;
+	height: 20px;	
+}
+
+div.results-content{
+    margin-left:auto;
+    margin-right:auto;
+    width:100%
+}
+
+div.graph-heading{
+    margin-left:auto;
+    margin-right:auto;
+	border-left: 4px solid blue; 
+
+}
+
+div.results-graph{
+    margin-left:auto;
+    margin-right:auto;
+	height: 200px;
+	border: solid 1px;
+}
+
+div.graph-picture{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+

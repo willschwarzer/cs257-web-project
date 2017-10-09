@@ -1,0 +1,81 @@
+html, body{
+	margin:0;
+	padding:0;
+}
+ul.top {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: blue;
+}
+
+#about{
+	float:right;
+}
+li.menu {
+    float: left;
+}
+a.about:hover{
+	
+}
+li a, #about {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+	margin:0;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+li.data{
+	margin-top:20px;
+}
+
+
+
+.var-container{
+	padding-left:50px;
+	padding-top:1px;
+	list-style-type: square;
+	cursor: default;
+}
+
+h1 { 
+	padding-left: 10%;
+}
+
+h3 { 
+	padding-left: 10%;
+}
+
+/* */
+div.content{
+	margin-left: auto;
+    margin-right: auto;
+	width: 75%;
+	height: 20px;	
+}
+div.var-heading{
+	border-left: 4px solid blue; 
+
+}
+
+div.var-data{
+	margin:auto;
+	height: auto;
+}
+
+
+
+ul.sub-var-container-1{
+	display:none;
+}
+ul.sub-var-container-1:hover{
+	visibility:visible;
+}
