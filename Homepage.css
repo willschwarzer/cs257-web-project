@@ -9,6 +9,21 @@ ul.top {
     overflow: hidden;
     background-color: blue;
 }
+#steps{
+	margin:0;
+	padding:0;
+}
+li.steps{
+    background-color:blue;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+	margin:10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 
 #about{
 	float:right;
@@ -19,6 +34,7 @@ li.menu {
 a.about:hover{
 	
 }
+
 li.menu a, #about {
     display: block;
     color: white;
@@ -34,7 +50,7 @@ li.menu a:hover {
 }
 
 li.data{
-	margin-top:20px;
+	margin-top:10px;
 }
 
 .var-container{
@@ -53,6 +69,10 @@ h3 {
 	padding-left: 5%;
 }
 
+div.intro{
+	margin:10px;
+	padding-top:10px;
+}
 div.content{
 	margin-left: auto;
     margin-right: auto;
@@ -72,7 +92,6 @@ div.var-data{
 	margin:10px;
 	height: auto;
 	border-top: solid black 1px;
-	border-bottom: solid black 1px;
 	
 }
 
@@ -83,4 +102,5 @@ ul.sub-var-container-1{
 }
 .data:hover ul{
 	display:block;
+	cursor:pointer;
 }

@@ -11,17 +11,24 @@
 	<ul class = "top">
 		<li class = "menu" ><a class = "homepage" href = "index.html">GSS Dataset</a></li>
 		<li class = "menu" ><a class = "step" href = "index.html" id = "s1"> Step 1</a></li>
-		<li class = "menu" ><a class = "step" href = "index.html"id = "s2"> Step 2</a></li>
+		<li class = "menu" ><a class = "step" href = "index.html" id = "s2"> Step 2</a></li>
 		<li class = "menu" ><a class = "step" href = "index.html" id = "s3"> Step 3</a></li>
-		<li id = "about" class = "menu" >		About </li> 
+		<li class = "menu" ><a class = "step" href = "results.html" id = "s3"> Results</a></li>
+		<li id = "about" class = "menu" >About </li> 
 		
 	</ul>
   </nav>
   
   <div class = "content">
 	  <div class = "intro">
-		<h3> This is a tool for understanding public opinions: </h3>
+		<h3 id = steps> This site lets you interactively query GSS data. </h3>
+		<ul>
+			<li class = "steps"> Step 1: Primary Variable</li>
+			<li class = "steps"> Step 2: Secondary Variable</li>
+			<li class = "steps"> Step 3: Control Variable</li>
+		</ul>
 	  </div>
+	  
 	  
 	  <div class = "vars">
 		<div class = "var-heading">
@@ -29,7 +36,7 @@
 		</div>
 		<div class = "var-data">
 			<ul class = "var-container">
-				<li class = "data"> <strong> there are 2000ish variables but the following elements give sense to how the user will select variables</strong> </li>
+				<li class = "data"> <strong> The following menu gives a sense of how the user will select variables. It will eventually include sub-menus. </strong> </li>
 				<li class = "data"> Background
 					<ul class = "sub-var-container-1">
 						<li><a>Income</a></li>
@@ -37,20 +44,16 @@
 						<li><a>Race</a></li>
 					</ul>
 				</li>
-				<li class = "data"> Opinions 
+				<li class = "data"> Opinions
 					<ul class = "sub-var-container-1">
 						<li><a>Is abortion okay?</a></li>
-						<li><a>Gun control okay?<a></li>
+						<li><a>Gun control okay?</a></li>
 					</ul>
 				</li>
 			</ul>
 		</div>
 	  </div>
-	  <div class = "var-heading">			
-				<div class = "step-instructions"> <h3>Step 2: Choose another variable(or not) </h3></div>
-				<div class = "step-instructions"> <h3>Step 3: Choose a control </h3></div>
-				<div class = "step-instructions"> <h3>Step 4: (optional) write a paper about it</h3></div>	
-	  </div>
-	  </div>
+
+  </div>
   </body>
 </html>
