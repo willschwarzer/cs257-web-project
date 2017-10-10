@@ -19,7 +19,7 @@ li.menu {
 a.about:hover{
 	
 }
-li a, #about {
+li.menu a, #about {
     display: block;
     color: white;
     text-align: center;
@@ -29,7 +29,7 @@ li a, #about {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+li.menu a:hover {
     background-color: #111;
 }
 
@@ -37,11 +37,10 @@ li.data{
 	margin-top:20px;
 }
 
-
-
 .var-container{
 	padding-left:50px;
 	padding-top:1px;
+	padding-bottom:30px;
 	list-style-type: square;
 	cursor: default;
 }
@@ -51,10 +50,9 @@ h1 {
 }
 
 h3 { 
-	padding-left: 10%;
+	padding-left: 5%;
 }
 
-/* */
 div.content{
 	margin-left: auto;
     margin-right: auto;
@@ -62,13 +60,20 @@ div.content{
 	height: 20px;	
 }
 div.var-heading{
-	border-left: 4px solid blue; 
+	padding:auto;
+	margin:auto;
+}
 
+div.step-instructions{
+	border-left: 4px solid blue; 
 }
 
 div.var-data{
-	margin:auto;
+	margin:10px;
 	height: auto;
+	border-top: solid black 1px;
+	border-bottom: solid black 1px;
+	
 }
 
 
@@ -76,6 +81,6 @@ div.var-data{
 ul.sub-var-container-1{
 	display:none;
 }
-ul.sub-var-container-1:hover{
-	visibility:visible;
+.data:hover ul{
+	display:block;
 }

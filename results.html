@@ -1,48 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>GSS Survey Data</title>
+  <meta charset="utf-8">
+  <title>GSS Survey Data</title>
 	<link rel="stylesheet" type="text/css" href="results.css">	
   </head>
   <body>
-  
+
   <nav>
 	<ul>
-		<li class = "menu" href = "index.html"><a class = "homepage">GSS Dataset</a></li>
-		<li class = "menu" href = "index.html"><a class = "step" id = "s1"> Step 1</a></li>
-		<li class = "menu" href = "index.html"><a class = "step" id = "s2"> Step 2</a></li>
-		<li class = "menu" href = "index.html"><a class = "step" id = "s3"> Step 3</a></li>
-        <li class = "menu"><a class = "step" id = "s3" href = "results.html"> Results</a></li>
-		<li id = "about" class = "menu" href = "index.html"><a class = "about">About </a></li>
+      <li class = "menu" href = "index.html"><a class = "homepage">GSS Dataset</a></li>
+      <li class = "menu" href = "index.html"><a class = "step" id = "s1"> Step 1</a></li>
+      <li class = "menu" href = "index.html"><a class = "step" id = "s2"> Step 2</a></li>
+      <li class = "menu" href = "index.html"><a class = "step" id = "s3"> Step 3</a></li>
+      <li class = "menu"><a class = "step" id = "s3" href = "results.html"> Results</a></li>
+      <li id = "about" class = "menu" href = "index.html"><a class = "about">About </a></li>
 	</ul>
   </nav>
   
-    <div class = "content">
-        <div class = "intro">
-            <h1> Results for your query of *variable* vs. *variable*: </h1>
-        </div>
-        <div class = "results-content">
-            <div class = "results-graph">
-                <div class = "graph-heading">
-                    <h3> 
-                        <span class = "step-2"> A sample graph (taken from the Berkeley SDA) </span>
-                    </h3>
-                </div>
-                <div class = "graph-picture"
-                    <ul class = "graph-container">
-                        <img src="Sample_GSS_Chart_SDA.png" alt="Sample Chart">
-                    </ul>
-                </div>
-            </div>
-            <div class = "results-stats">
-                <table>
-                    <tr>
-                    <td> n = 52,072 </td>
-                    </tr>
-                </table>
-            </div>
-        </div>    
+  <div class = "content">
+    <div class = "intro">
+      <h1> Results for your query of "FAMINC" vs. "YEAR": </h1>
     </div>
+    <div class = "results-content">
+      <div class = "results-graph">
+        <div class = "graph-heading">
+          <h3> 
+            <span class = "step-2"> A sample graph (taken from the Berkeley SDA) </span>
+          </h3>
+        </div>
+        <div class = "graph-picture"
+          <ul class = "graph-container">
+            <img src="Sample_GSS_Chart_SDA.png" alt="Sample Chart">
+          </ul>
+        </div>
+      </div>
+      <div class = "results-stats">
+        <table>
+          <tr>
+            <td> n = 52,072 </td>
+          </tr>
+          <tr>
+            <td> Ave. = 15,000
+          </tr>
+          <tr>
+            <td> Sample St. Dev. = 5,000
+          </tr>
+          <tr>
+            <td> Pop. St. Dev. = 4,500
+          </tr>
+        </table>
+      </div>
+    </div>  
+    <div class="results-sharing">
+      <!--<div class="download-button-container"
+        <button type="results-download">
+          Download results
+        </button>
+      </div>-->
+      <button type="button" class="download">
+        download results
+      </button>
+      or share to social media:
+      <button type="button" class = "sharing">
+        Facebook
+      </button>
+      <button type="button" class = "sharing">
+        Twitter
+      </button>
+      <button type="button" class = "sharing">
+        LinkedIn
+      </button>
+      
+    </div>
+  </div>
   </body>
 </html>

@@ -1,6 +1,7 @@
-html, body{
+body{
 	margin:0;
 	padding:0;
+    background:#ffffff;
 }
 ul {
     list-style-type: none;
@@ -52,36 +53,122 @@ h3 {
 }
 
 /* */
+
+.button {
+    background-color:blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.intro{
+    left:50%;
+    width:100%;
+    text-align:center;
+}
+
 div.content{
-	margin-left: auto;
-    margin-right: auto;
-	width: 100%;
-	height: 20px;	
+	margin:auto;
+	width: 55%;
+    height:100%;
+    background: #ffffff;
 }
 
 div.results-content{
-    margin-left:auto;
-    margin-right:auto;
-    width:100%
+    position:relative;
+    text-align:center;
+    margin:auto;
+    height:500px;
+}
+
+button.download{
+    float:left;
+    background-color:blue;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
 }
 
 div.graph-heading{
-    margin-left:auto;
-    margin-right:auto;
-	border-left: 4px solid blue; 
-
+    text-align:center;
+    margin:auto;
 }
 
 div.results-graph{
-    margin-left:auto;
-    margin-right:auto;
-	height: 200px;
-	border: solid 1px;
+    float:right;
+    display:block;
+    margin:auto;
+    width:80%;
+    margin:10px auto;
 }
 
 div.graph-picture{
-    margin-left:auto;
-    margin-right:auto;
+    display:block;
+    margin:auto;
+}
+
+div.results-sharing{
+    display:block;
+    margin:auto;
+    text-align:center;
+    width:100%;
+}
+
+button.sharing{
+    float:right;
+    background-color:blue;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+/*#download {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}*/
+
+div.results-stats{
+    float:left;
+    position:absolute;
+    display:block;
+    width:25%;
+    top:150px;
+    margin:10px auto;
+}
+
+img {
+    display:block;
+    margin:auto;
+}
+
+table, th, td{
+    text-align:left;
+    display:block;
+    margin:auto;
+    border-spacing:0px;
+}
+
+td{
+    padding: 15px;
+    border:1px solid blue;
 }
 
 
