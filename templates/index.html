@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GSS Survey Data</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/homepage.css') }}">
+  </head>
+  <body>
+  
+  <nav>
+	<ul class = "top">
+		<li class = "menu" ><a class = "homepage" href = "index.html">GSS Dataset</a></li>
+		<li class = "menu" ><a class = "step" href = "index.html" id = "s1"> Step 1</a></li>
+		<li class = "menu" ><a class = "step" href = "index.html" id = "s2"> Step 2</a></li>
+		<li class = "menu" ><a class = "step" href = "index.html" id = "s3"> Step 3</a></li>
+		<li class = "menu" ><a class = "step" href = "results.html" id = "s3"> Results</a></li>
+		<li id = "about" class = "menu" >About </li> 
+		
+	</ul>
+  </nav>
+  
+  <div class = "content">
+	  <div class = "intro">
+		<h3 id = steps> This site lets you interactively query GSS data. </h3>
+		<ul>
+			<li class = "steps"> Step 1: Primary Variable</li>
+			<li class = "steps"> Step 2: Secondary Variable</li>
+			<li class = "steps"> Step 3: Control Variable</li>
+		</ul>
+	  </div>
+	  
+	  
+	  <div class = "vars">
+		<div class = "var-heading">
+			<div class = "step-instructions"> <h3>Step 1: Choose a variable </h3></div>
+		</div>
+		<div class = "var-data">
+			<ul class = "var-container">
+				<li class = "data"> <strong> The following menu gives a sense of how the user will select variables. It will eventually include sub-menus. </strong> </li>
+				<li class = "data"> Background
+					<ul class = "sub-var-container-1">
+						<li><a>Income</a></li>
+						<li><a>Education</a></li>
+						<li><a>Race</a></li>
+					</ul>
+				</li>
+				<li class = "data"> Opinions
+					<ul class = "sub-var-container-1">
+						<li><a>Is abortion okay?</a></li>
+						<li><a>Gun control okay?</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	  </div>
+
+  </div>
+  </body>
+</html>

@@ -37,7 +37,7 @@ def boring():
 
 @app.route('/greet/<person>/')
 def greet(person):
-    return render_template('greet.html',
+    return render_template('index.html',
                            person=person)
 
 @app.route('/fruit')
