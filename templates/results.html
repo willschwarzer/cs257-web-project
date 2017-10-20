@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <title>GSS Survey Data</title>
-	<link rel="stylesheet" type="text/css" href="results.css">	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/results.css') }}">	
   </head>
   <body>
 
@@ -13,8 +13,8 @@
       <li class = "menu" href = "index.html"><a class = "step" id = "s1"> Step 1</a></li>
       <li class = "menu" href = "index.html"><a class = "step" id = "s2"> Step 2</a></li>
       <li class = "menu" href = "index.html"><a class = "step" id = "s3"> Step 3</a></li>
-      <li class = "menu"><a class = "step" id = "s3" href = "results.html"> Results</a></li>
-      <li id = "about" class = "menu" href = "index.html"><a class = "about">About </a></li>
+      <li class = "menu"><a class = "step" id = "s3" href = "results"> Results</a></li>
+      <li id = "about" class = "menu" href = "index"><a class = "about">About </a></li>
 	</ul>
   </nav>
   
@@ -31,7 +31,7 @@
         </div>
         <div class = "graph-picture"
           <ul class = "graph-container">
-            <img src="Sample_GSS_Chart_SDA.png" alt="Sample Chart">
+            <img src="{{ url_for('static', filename='output.png') }}">
           </ul>
         </div>
       </div>

@@ -16,29 +16,15 @@ app = flask.Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello, Citizen of CS257.'
-
-@app.route('/fancier/')
-def itDoesHTML():
-    htmlStr = '<html lang="en">' + \
-        '<head>' + \
-        '  <title>Cool page</title>' + \
-        '</head>' + \
-        '<body>' + \
-        '  <h1>Welcome to CS 257</h1>' + \
-        '  <p>Please refrain from feeding the squirrels. &lt;test this&gt; </p>' + \
-        '</body>' + \
-        '</html>'
-    return htmlStr
+    return render_template('index.html')
 
 @app.route('/boring/')
 def boring():
-    return render_template('boring.html')
+    return render_template('index.html')
 
-@app.route('/greet/<person>/')
-def greet(person):
-    return render_template('index.html',
-                           person=person)
+@app.route('/results')
+def results():
+    return render_template('results.html')
 
 @app.route('/fruit')
 def fruit():
