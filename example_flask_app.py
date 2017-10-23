@@ -11,6 +11,7 @@ import flask
 from flask import render_template
 import json
 import sys
+import datasource
 
 app = flask.Flask(__name__)
 
@@ -40,6 +41,16 @@ def fruit():
 @app.route('/fruitImg/')
 def fruitImg():
     return render_template('fruitImg.html')
+    
+@app.route('/<vars>/results')
+def get_results(vars):
+    ds = datasource.DataSource()
+    splitVars = vars.split('-')
+    ds.runQuery(splitVars)
+    ds.createGraph()
+    queryStats = ds.getStats()
+    return render_template('results.html', stats=queryStats)
+    
 
 @app.route('/authors/<author>')
 def get_author(author):

@@ -5,16 +5,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-# NOTE TO GRADER: It may seem as though this implementation is not yet
-# complete, and relative to what we said we wanted to do in the project plan,
-# it isn't. However, we've talked to Amy, and she agreed that our project as a
-# whole is quite ambitious, and said that we could scale it back if we wanted.
-# For that reason, the bits that are missing here - controls, graphing for 
-# other variable types, etc. - may not be parts of the final project that we
-# haven't put in yet, but rather things that we will not put in at all.
-# We're simply waiting to see what we have time to do in the end, and
-# prioritizing proper functionality for the features we know we want.
-
 def main():
     """Runs some sample queries on the database. Switch out the passed query in
     the runQuery() call to view other query results. Note that some 
@@ -22,11 +12,11 @@ def main():
     for details)."""
     # Sample queries
     querySingleCategorical = ["ETHNIC", "", "", ""]
-    querySingleContinuous = ["EDUC", "", "", ""]
+    querySingleContinuous = ["AGE", "", "", ""]
     queryDoubleCategorical = ["ETHNIC", "RACE", "", ""]
     # Running the queries
     ds = DataSource()
-    ds.runQuery(querySingleCategorical)
+    ds.runQuery(querySingleContinuous)
     print(ds.getStats())
     ds.createGraph()
 
@@ -37,7 +27,8 @@ class DataSource:
     
     def __init__(self):
         # Create database connection
-        self.connection = psycopg2.connect("dbname=mannesn user=mannesn")
+        self.connection = psycopg2.connect("dbname=mannesn user=mannesn" +
+                                " password=snail647spring host=localhost")
         self.initializeCursor()
         # Future pandas objects
         theDataFrame = None
@@ -232,7 +223,7 @@ class DataSource:
             dataType = self.dataTypePrimary
         else:
             dataType = self.dataTypeSecondary
-        if self.getDataType(varName, responses):
+        if dataType == 'categorical':
             for x in varList:
                 temp = x[1]
                 temp = temp.replace('"', '')
@@ -355,31 +346,31 @@ class DataSource:
             
     def getHeatMap(self, theDataFrame):
         """Creates a heatmap for two categorical variable queries."""
-        f, ax = plt.subplots(figsize=(15, 10))
+        f, ax = plt.subplots(figsize=(12, 6))
         self.theDataFrame = self.categoricalArrayToDataFrame(self.dataArray)
         plot = sns.heatmap(self.theDataFrame, annot=True, fmt="d", 
                             linewidths=0.5, ax=ax, cmap="Blues")
         ax.set(xlabel=self.secondary, ylabel=self.primary)
         picture = plot.get_figure()
-        picture.savefig("output.png")
+        picture.savefig("static/output.png")
         return
 
     def getDistPlot(self, array):
         """Creates a seaborn-style distplot (similar to a histogram) for
         single continuous variable queries."""
         self.theDataSeries=self.continuousArrayToSeries(array)
-        f, ax = plt.subplots(figsize=(15, 10))
+        f, ax = plt.subplots(figsize=(12, 6))
         ax = sns.distplot(self.theDataSeries)
         ax.set(xlabel=self.primary)
         picture = ax.get_figure()
-        picture.savefig("output.png")
+        picture.savefig("static/output.png")
         return
 
     def getBarPlot(self, array):
         """Creates a bar plot for single categorical variable queries."""
         # NOTE: sns.barplot() does not yet seem to play well with pandas series
         # For that reason, this is temporarily using default arrays
-        f, ax = plt.subplots(figsize=(15, 10))
+        f, ax = plt.subplots(figsize=(12, 6))
         ax = sns.barplot(array[0], array[1])
         ax.set(xlabel=self.primary, ylabel = "count")
         # Rotate labels
@@ -388,7 +379,7 @@ class DataSource:
         # Add margin to bottom
         f.subplots_adjust(bottom=0.2)
         picture = ax.get_figure()
-        picture.savefig("output.png")     
+        picture.savefig("static/output.png")     
         
     def categoricalArrayToSeries(self, array):
         """Converts a 2-element list of lists (i.e. for a single variable

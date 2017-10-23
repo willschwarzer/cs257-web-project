@@ -73,7 +73,7 @@ h3 {
 
 div.content{
 	margin:auto;
-	width: 55%;
+	width: 1000px;
     height:100%;
     background: #ffffff;
 }
@@ -82,7 +82,7 @@ div.results-content{
     position:relative;
     text-align:center;
     margin:auto;
-    height:500px;
+    height:660px;
 }
 
 button.download{
@@ -106,7 +106,7 @@ div.results-graph{
     float:right;
     display:block;
     margin:auto;
-    width:80%;
+    width:90%;
     margin:10px auto;
 }
 
@@ -149,7 +149,8 @@ div.results-stats{
     float:left;
     position:absolute;
     display:block;
-    width:25%;
+    height:10%;
+    width:10%;
     top:150px;
     margin:10px auto;
 }
