@@ -12,6 +12,7 @@ from flask import render_template
 import json
 import sys
 import datasource
+import numpy as np
 
 app = flask.Flask(__name__)
 
@@ -19,49 +20,39 @@ app = flask.Flask(__name__)
 def hello():
     return render_template('index.html')
 
-@app.route('/boring/')
-def boring():
-    return render_template('index.html')
-
-@app.route('/results')
-def results():
-    return render_template('results.html')
-
-@app.route('/fruit')
-def fruit():
-    myFruit = [
-        {'name': 'apple', 'rating': 7},
-        {'name': 'banana', 'rating': 5},
-        {'name': 'pear', 'rating': 4}
-    ]
-
-    return render_template('fruit.html',
-                           fruits=myFruit)
-
-@app.route('/fruitImg/')
-def fruitImg():
-    return render_template('fruitImg.html')
-    
-@app.route('/<vars>/results')
-def get_results(vars):
+@app.route('/results/<var>')
+def get_results_1_variable(var):
     ds = datasource.DataSource()
-    splitVars = vars.split('-')
-    ds.runQuery(splitVars)
-    ds.createGraph()
-    queryStats = ds.getStats()
-    return render_template('results.html', stats=queryStats)
-    
-
-@app.route('/authors/<author>')
-def get_author(author):
-    ''' What a dopey function! But it illustrates a Flask route with a parameter. '''
-    if author == 'Twain':
-        author_dictionary = {'last_name':'Twain', 'first_name':'Mark'}
-    elif author == 'Shakespeare':
-        author_dictionary = {'last_name':'Shakespeare', 'first_name':'William'}
+    validVars = np.load('varList.npy')
+    print(var)
+    if var not in validVars:
+        return render_template('index.html')
     else:
-        author_dictionary = {'last_name':'McBozo', 'first_name':'Bozo'}
-    return json.dumps(author_dictionary)
+        ds.runQuery([var, ""])
+        ds.createGraph()
+        queryStats = ds.getStats()
+        return render_template('results.html', 
+                                stats=queryStats, 
+                                vars = [var, ""])
+                                
+@app.route('/results/<var1>/<var2>')
+def get_results_2_variables(var1, var2):
+    ds = datasource.DataSource()
+    validVars = np.load('varList.npy')
+    if var1 not in validVars or var2 not in validVars:
+        return render_template('index.html')
+    else:
+        ds.runQuery([var1, var2])
+        ds.createGraph()
+        queryStats = ds.getStats()
+        return render_template('results.html', 
+                                stats=queryStats, 
+                                vars = [var1, var2])
+                                
+@app.route('/second/<var>')
+def get_second(var):
+    print(var)
+    return render_template('second.html', var = var)
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:

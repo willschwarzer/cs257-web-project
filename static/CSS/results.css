@@ -73,16 +73,15 @@ h3 {
 
 div.content{
 	margin:auto;
-	width: 1000px;
+	width: 1200px;
     height:100%;
-    background: #ffffff;
 }
 
 div.results-content{
     position:relative;
     text-align:center;
     margin:auto;
-    height:660px;
+    height:700px;
 }
 
 button.download{
@@ -113,6 +112,8 @@ div.results-graph{
 div.graph-picture{
     display:block;
     margin:auto;
+    height:90%;
+    vertical-align:top;
 }
 
 div.results-sharing{
