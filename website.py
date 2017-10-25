@@ -48,7 +48,7 @@ def get_results_2_variables(var1, var2):
         queryStats = ds.getStats()
         return render_template('results.html', 
                                 stats=queryStats, 
-                                vars = [var1, var2])
+                                var1 = var1, var2 = var2)
                                 
 @app.route('/second/<var>')
 def get_second(var):

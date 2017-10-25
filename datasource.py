@@ -14,9 +14,10 @@ def main():
     querySingleCategorical = ["ETHNIC", "", "", ""]
     querySingleContinuous = ["AGE", "", "", ""]
     queryDoubleCategorical = ["ETHNIC", "RACE", "", ""]
+    queryCategoricalvContinuous = ["AGE", "EDUC", "", ""]
     # Running the queries
     ds = DataSource()
-    ds.runQuery(querySingleContinuous)
+    ds.runQuery(queryCategoricalvContinuous)
     print(ds.getStats())
     ds.createGraph()
 
@@ -66,25 +67,10 @@ class DataSource:
         type1 = self.dataTypePrimary
         type2 = self.dataTypeSecondary
         if type2 == "":
-            if type1 == "categorical":
-                self.getBarPlot(self.dataArray)
-            else:
-                self.getDistPlot(self.dataArray)
-        elif type1 == type2 == "categorical":
-            self.getHeatMap(self.dataArray)
+            self.getBarPlot(self.dataArray)
         else:
-            raise ValueError("This data type not yet implemented!")
-
-        # TODO add remaining graph types
-        # elif dataType == "categorical-continuous":
-        #     self.getLinePlot(self.dataArray)
-        # elif dataType == "continuous-categorical":
-        #     self.getAverageBarPlot(self.dataArray)
-        # elif dataType == "continuous-continuous":
-        #     self.getScatterPlot(self.dataArray)
-        # return
+            self.getHeatMap(self.dataArray)
           
-    #TODO: error check this super hard
     def parseQueryVariables(self, query):
         """Saves the desired variables for this query"""
         self.primary = query[0]
@@ -95,12 +81,7 @@ class DataSource:
         
     ### DATABASE MANAGEMENT ###
     
-    #TODO, make dataframe work with control variable(s)
     def getDataArray(self):
-        #if self.control2 != "":
-         #   return self.getDictionary()
-        #elif self.control1 != "":
-        #    return self.getDictionary()
         dict = self.getDictionary()
         if self.secondary != "":
             return self.dictionaryToArrayTwoVariables(dict)
@@ -145,13 +126,6 @@ class DataSource:
             array.append(nextRow)
         self.dataArray = array
         return array
-        
-    #    Controls not yet implemented    
-    #    def dictionaryToArrayOneControl(self):
-    #        return self.query()
-    #        
-    #    def dictionaryToArrayTwoControls(self):
-    #        return self.query()
                  
     def getDictionary(self):
         """Selects one of two functions to create a dictionary 
@@ -235,21 +209,26 @@ class DataSource:
     def getVarKeys(self, varName, dict):
         """For a given variable in the input, return a list of all of the 
         responses that correspond to that variable form the results"""
-        vars = []
-        keys = sorted(dict.keys())
+        orderedValues, continuousValues, categoricalValues = [], [], []
+        keys = dict.keys()
         if varName == self.primary:
-            for k in keys:
-                vars.append(k[0])
-        elif varName == self.secondary:
-            for k in keys:
-                vars.append(k[1])
-        elif varName == self.control1:
-             for k in keys:
-                vars.append(k[2])
+            values = [key[0] for key in keys]
         else:
-            for k in keys:
-                vars.append(k[3])
-        return vars
+            values = [key[1] for key in keys]
+        for value in values:
+            try:
+                x=int(value)
+                continuousValues.append(value)
+            except:
+                categoricalValues.append(value)
+        continuousValues.sort(key = lambda x: int(x))
+        for value in continuousValues:
+            if value not in orderedValues:
+               orderedValues.append(value)
+        for value in categoricalValues:
+            if value not in orderedValues:
+                orderedValues.append(value)
+        return orderedValues
         
     def getDataType(self, varName, dict):
         """Tests whether or not a variable is continuous(AGE) or 
@@ -348,11 +327,15 @@ class DataSource:
         """Creates a heatmap for two categorical variable queries."""
         f, ax = plt.subplots(figsize=(12, 6))
         self.theDataFrame = self.categoricalArrayToDataFrame(self.dataArray)
-        plot = sns.heatmap(self.theDataFrame, annot=True, fmt="d", 
-                            linewidths=0.5, ax=ax, cmap="Blues")
+        if self.dataTypePrimary == self.dataTypeSecondary == "categorical":
+            plot = sns.heatmap(self.theDataFrame, annot=True, fmt="d", 
+                                linewidths=0.5, ax=ax, cmap="Blues")
+        else:
+            plot = sns.heatmap(self.theDataFrame, annot=False, fmt="d", 
+                                linewidths=0.5, ax=ax, cmap="Blues")
         ax.set(xlabel=self.secondary, ylabel=self.primary)
         picture = plot.get_figure()
-        picture.savefig("static/output.png")
+        picture.savefig("static/output.png", bbox_inches = "tight")
         return
 
     def getDistPlot(self, array):
@@ -363,7 +346,7 @@ class DataSource:
         ax = sns.distplot(self.theDataSeries)
         ax.set(xlabel=self.primary)
         picture = ax.get_figure()
-        picture.savefig("static/output.png")
+        picture.savefig("static/output.png", bbox_inches = "tight")
         return
 
     def getBarPlot(self, array):
@@ -379,7 +362,7 @@ class DataSource:
         # Add margin to bottom
         f.subplots_adjust(bottom=0.2)
         picture = ax.get_figure()
-        picture.savefig("static/output.png")     
+        picture.savefig("static/output.png", bbox_inches = "tight")     
         
     def categoricalArrayToSeries(self, array):
         """Converts a 2-element list of lists (i.e. for a single variable
