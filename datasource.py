@@ -335,7 +335,7 @@ class DataSource:
                                 linewidths=0.5, ax=ax, cmap="Blues")
         ax.set(xlabel=self.secondary, ylabel=self.primary)
         picture = plot.get_figure()
-        picture.savefig("static/output.png", bbox_inches = "tight")
+        picture.savefig("static/" + self.primary + "-" + self.secondary + ".png", bbox_inches = "tight")
         return
 
     def getDistPlot(self, array):
@@ -362,7 +362,7 @@ class DataSource:
         # Add margin to bottom
         f.subplots_adjust(bottom=0.2)
         picture = ax.get_figure()
-        picture.savefig("static/output.png", bbox_inches = "tight")     
+        picture.savefig("static/" + self.primary + ".png", bbox_inches = "tight")     
         
     def categoricalArrayToSeries(self, array):
         """Converts a 2-element list of lists (i.e. for a single variable

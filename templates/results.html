@@ -36,7 +36,11 @@
         </div>
         <div class = "graph-picture"
           <ul class = "graph-container">
-            <img src="{{ url_for('static', filename='output.png') }}">
+            {% if var2 == "" %}
+                <img src="{{ url_for('static', filename= var1 ~ '.png') }}">
+            {% else %}
+                <img src="{{ url_for('static', filename= var1 ~ '-' ~ var2 ~ '.png') }}">
+            {% endif %}
           </ul>
         </div>
       </div>
