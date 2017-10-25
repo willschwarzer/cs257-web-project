@@ -13,14 +13,19 @@
 		<li class = "menu" ><a class = "step" href = "../../../../" id = "s1"> Step 1</a></li>
 		<li class = "menu" ><a class = "step" href = "../../../second/{{var1}}" id = "s2"> Step 2</a></li>
 		<li class = "menu" ><a class = "step" href = "" id = "s3"> Results</a></li>
-		<li id = "about" class = "menu" >About </li> 
+		<!--<li id = "about" class = "menu" >About </li>-->
 		
 	</ul>
   </nav>
   
   <div class = "content">
     <div class = "intro">
-      <h1> Results for your query of "FAMINC" vs. "YEAR": </h1>
+      {% if var2 == "" %}
+      <h1> Results for your query of "{{var1}}": </h1>
+      {% else %}
+      <h1> Results for your query of "{{var1}}" vs. "{{var2}}": </h1>
+      {% endif %}
+      
     </div>
     <div class = "results-content">
       <div class = "results-graph">
@@ -38,26 +43,12 @@
       <div class = "results-stats">
         <table>
           <tr>
-            <td> n = 52,072 </td>
-          </tr>
-          <tr>
-            <td> Ave. = 15,000
-          </tr>
-          <tr>
-            <td> Sample St. Dev. = 5,000
-          </tr>
-          <tr>
-            <td> Pop. St. Dev. = 4,500
+            <td> n = {{stats}} </td>
           </tr>
         </table>
       </div>
     </div>  
-    <div class="results-sharing">
-      <!--<div class="download-button-container"
-        <button type="results-download">
-          Download results
-        </button>
-      </div>-->
+    <!--<div class="results-sharing">
       <button type="button" class="download">
         download results
       </button>
@@ -72,7 +63,7 @@
         LinkedIn
       </button>
       
-    </div>
+    </div>-->
   </div>
   </body>
 </html>

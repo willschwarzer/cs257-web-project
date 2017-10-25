@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GSS Survey Data</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/Homepage.css') }}">	
+  </head>
+<script>
+	<!--script courtesy of:http://www.webdeveloper.com/forum/showthread.php?207570-Making-content-disappear-and-reappear-->
+	function showHideLinks(s) {
+		var obj = document.getElementById(s)
+		if (obj.style.display == "none" || obj.style == null){
+			obj.style.display = "block"
+		}
+		else{
+			obj.style.display= "none"
+        }
+	}	
+</script>
+
+  <body>
+  
+  <nav>
+	<ul class = "top">
+		<li class = "menu" ><a class = "homepage" href = "../../../">GSS Dataset</a></li>
+		<li id = "s1" class = "menu" ><a class = "step" href = "../../../" > Step 1</a></li>
+		<li id = "about" class = "menu" >About </li> 
+		
+	</ul>
+  </nav>
+  
+  <div class = "content">
+	  <div class = "intro">
+		<h3 id = "steps"> Error: invalid variable choice.</h3>
+		<h4>Please return to Step 1 and try again.</h4>
+	  </div>
+	</div>
+  </body>
+</html>

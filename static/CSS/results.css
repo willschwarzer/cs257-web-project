@@ -28,8 +28,21 @@ li a {
 	margin:0;
 }
 
+li.menu a, #about {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+	margin:0;
+}
+
 /* Change the link color to #111 (black) on hover */
 li a:hover {
+    background-color: #111;
+}
+
+#s3 {
     background-color: #111;
 }
 
@@ -152,7 +165,7 @@ div.results-stats{
     display:block;
     height:10%;
     width:10%;
-    top:150px;
+    top:280px;
     margin:10px auto;
 }
 
