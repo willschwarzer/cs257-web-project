@@ -16,6 +16,8 @@ def about():
 
 @app.route('/results/<var>')
 def getResults1Variable(var):
+    ''' Checks if the single variable results request is valid, and if it is,
+    returns the results page (or a no values found error) with the results.'''
     validVars = np.load('varList.npy')
     if var not in validVars:
         return render_template('invalidvariables.html')
@@ -24,6 +26,8 @@ def getResults1Variable(var):
                                 
 @app.route('/results/<var1>/<var2>')
 def getResults2Variables(var1, var2):
+    ''' Checks if the double variable results request is valid, and if it is,
+    returns the results page (or a no values found error) with the results.'''
     validVars = np.load('varList.npy')
     if var1 not in validVars or var2 not in validVars:
         return render_template('invalidvariables.html')
@@ -34,10 +38,13 @@ def getResults2Variables(var1, var2):
                                 
 @app.route('/second/<var>')
 def getSecond(var):
-    print(var)
+    ''' Given a first variable selection, displays the page for selecting a
+    second variable or immediately getting results.'''
     return render_template('second.html', var = var)
     
 def displayResults(var1, var2):
+    ''' Given two variables, runs a query, and if any responses were found,
+    displays the results of the query.'''
     descriptionDict = np.load('descriptionDict.npy').item()
     descr1 = descriptionDict[var1]
     descr2 = ""
