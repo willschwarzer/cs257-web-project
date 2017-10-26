@@ -1,8 +1,18 @@
-# web-project
-This repo contains starter code for the database-driven web project. It consists of the following files:
+# Final Web Project B
+Our project lets users click around an extensive menu. 
+The user may query between one and two variables and see a graph of the results.
 
-createtable.sql: A Python script used to create a database and set up the table(s), including table columns and types.
+Feature List:
+  - Query one variable
+  - Query two variables
+  - Generate graphs based on different types of categorical or continuous data
+  - Extensive menu of variables to compare
+  - Graphs display plain-english variable meanings
+  - Graphs are generated (or an appropriate error message is thrown) with all queries
+  - Homepage explains how to use website
 
-earthquakeData.csv: A comma-space delimited text file containing earthquake data from the end of August through the end of September, 2017. Use this to practice setting up your database if you haven't yet identified a dataset.
+Our Data is called the General Social Survey (GSS) Cumulative Datafile 1972-2016.
+The site has no apparent licensing info. The data is freely available to download.
+http://gss.norc.org/Get-The-Data
 
-psycopg-2.py: A Python script that executes SQL queries using the psycopg2 library.
+The next feature that we would have implemented was supporting a third control variable in each query.
