@@ -38,6 +38,11 @@ def getSecond(var):
     return render_template('second.html', var = var)
     
 def displayResults(var1, var2):
+    descriptionDict = np.load('descriptionDict.npy').item()
+    descr1 = descriptionDict[var1]
+    descr2 = ""
+    if var2 != "":
+        descr2 = descriptionDict[var2]
     try:
         ds = datasource.DataSource()
         ds.runQuery([var1, var2])
@@ -45,7 +50,8 @@ def displayResults(var1, var2):
         queryStats = ds.getStats()
         return render_template('results.html', 
                               stats=queryStats, 
-                              var1 = var1, var2 = var2)
+                              var1 = var1, var2 = var2,
+                              descr1 = descr1, descr2 = descr2)
     except ValueError:
         return render_template('novalues.html')
 

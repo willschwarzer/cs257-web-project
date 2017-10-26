@@ -29,11 +29,6 @@
     </div>
     <div class = "results-content">
       <div class = "results-graph">
-        <div class = "graph-heading">
-          <h3> 
-            <span class = "step-2"> A sample graph (taken from the Berkeley SDA) </span>
-          </h3>
-        </div>
         <div class = "graph-picture"
           <ul class = "graph-container">
             {% if var2 == "" %}
@@ -42,6 +37,21 @@
                 <img src="{{ url_for('static', filename= var1 ~ '-' ~ var2 ~ '.png') }}">
             {% endif %}
           </ul>
+        </div>
+        <div class = "graph-heading">
+          {% if descr2 != "" %}
+          <h4> 
+          The above graph shows respondents' answers to {{descr1}} organized by
+          their responses to {{descr2}}. Each cell indicates the percentage of people
+          in that column who answered the row question a certain way: therefore, all
+          percentages total to 100% in each column.
+          </h4>
+          {% else %}
+          <h4> 
+          The above graph shows respondents' answers to {{descr1}}. The sizes of the
+          bars indicate the number of people who gave that response in the survey.
+          </h4>
+          {% endif %}
         </div>
       </div>
       <div class = "results-stats">
@@ -52,22 +62,6 @@
         </table>
       </div>
     </div>  
-    <!--<div class="results-sharing">
-      <button type="button" class="download">
-        download results
-      </button>
-      or share to social media:
-      <button type="button" class = "sharing">
-        Facebook
-      </button>
-      <button type="button" class = "sharing">
-        Twitter
-      </button>
-      <button type="button" class = "sharing">
-        LinkedIn
-      </button>
-      
-    </div>-->
   </div>
   </body>
 </html>

@@ -98,18 +98,6 @@ div.results-content{
     height:700px;
 }
 
-button.download{
-    float:left;
-    background-color:blue;
-    border: none;
-    color: white;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-}
-
 div.graph-heading{
     text-align:center;
     margin:auto;
@@ -130,43 +118,13 @@ div.graph-picture{
     vertical-align:top;
 }
 
-div.results-sharing{
-    display:block;
-    margin:auto;
-    text-align:center;
-    width:100%;
-}
-
-button.sharing{
-    float:right;
-    background-color:blue;
-    border: none;
-    color: white;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-}
-
-/*#download {
-    background-color: blue;
-    border: none;
-    color: white;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}*/
-
 div.results-stats{
     float:left;
     position:absolute;
     display:block;
     height:10%;
     width:10%;
-    top:280px;
+    top:210px;
     margin:10px auto;
 }
 
