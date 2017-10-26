@@ -1,0 +1,139 @@
+
+*{font-family:Cambria;}
+html, body{
+	margin:0;
+	padding:0;
+}
+ul.top {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: blue;
+}
+#steps{
+	margin:0;
+	padding:0;
+}
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+	margin:0;
+}
+#about{
+	float:right;
+	background-color:#111;
+}
+li.menu {
+    float: left;
+}
+
+li.steps{
+    background-color:blue;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+	margin:10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li.menu a:hover {
+    background-color: #111;
+}
+
+li.data{
+	margin-top:10px;
+}
+
+
+
+.var-container{
+	padding-left:50px;
+	padding-top:1px;
+	padding-bottom:30px;
+	list-style-type: square;
+	cursor: pointer;
+}
+
+h1 { 
+	padding-left: 10%;
+}
+
+h2 { 
+	padding-left: 5%;
+}
+
+div.intro{
+	margin:10px;
+	padding-top:10px;
+}
+div.content{
+	margin-left: auto;
+    margin-right: auto;
+	width: 75%;
+	height: 20px;	
+}
+div.var-heading{
+	padding:auto;
+	margin:auto;
+}
+
+div.step-instructions{
+	border-left: 4px solid blue; 
+}
+
+div.var-data{
+	margin:10px;
+	height: auto;
+	border-top: solid black 1px;
+	
+}
+
+ul.variable-list{
+	display:none;
+}
+
+ul.var-container{
+	cursor:pointer;
+}
+ul.sub-variable-list{
+	display:none;
+}
+
+li.inner-list{
+	border-style:outset;
+	border-top:solid blue 1px;
+	border-left:solid blue 1px;
+	border-color:blue;
+	display:block;
+	padding:3px;
+	margin:5px 0px;
+}
+
+li.outer-list{
+	border-style:outset;
+	border-top:solid blue 1px;
+	border-left:solid blue 1px;
+	border-color:blue;
+	display:block;
+	padding:3px;
+	margin:10px 4px;
+	margin-right:40px;
+}
+
+li.individual-variable{
+	
+	display:block;
+	padding:2px;
+	margin:5px 0px;
+}
+
+
+

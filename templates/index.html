@@ -9,7 +9,7 @@
 	<!--script courtesy of:http://www.webdeveloper.com/forum/showthread.php?207570-Making-content-disappear-and-reappear-->
 	function showHideLinks(s) {
 		var obj = document.getElementById(s)
-		if (obj.style.display == "none" || obj.style == null){
+		if (obj.style.display == "none"){
 			obj.style.display = "block"
 		}
 		else{
@@ -22,9 +22,9 @@
   
   <nav>
 	<ul class = "top">
-		<li class = "menu" ><a class = "homepage" href = "">GSS Dataset</a></li>
+		<li class = "menu" ><a class = "step" href = "">GSS Dataset</a></li>
 		<li id = "s1" class = "menu" ><a class = "step" href = "" > Step 1</a></li>
-		<!--<li id = "about" class = "menu" >About </li>-->
+		<li id = "about" class = "menu" ><a class = "step" href = "/about" >About</a> </li>
 		
 	</ul>
   </nav>
@@ -219,8 +219,8 @@
 </li></ul></li>
 <li class = "outer-list" onClick="event.stopPropagation();showHideLinks('Government');">Government
 <ul id = "Government" class="sub-variable-list" style="display:none">
-<li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Trust in Gov't');">Trust in Gov't
-<ul id = "Trust in Gov't" class="variable-list" style="display:none">
+<li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Trust in Govt');">Trust in Governmentt
+<ul id = "Trust in Govt" class="variable-list" style="display:none">
 <li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/ALIENAT1">ALIENAT1</a>: PEOPLE RUNNING COUNTRY DONT CARE</li>
 <li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/ALIENAT2">ALIENAT2</a>: RICH GET RICHER, POOR POORER</li>
 <li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/ALIENAT3">ALIENAT3</a>: WHAT YOU THINK DOESNT COUNT</li>
@@ -318,9 +318,7 @@
 <li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/AFFRMACT">AFFRMACT</a>: FAVOR PREFERENCE IN HIRING BLACKS</li>
 <li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/BLKSIMP">BLKSIMP</a>: HAVE CONDITIONS FOR BLACKS IMPROVED</li></ul>
 </li></ul></li>
-<li class = "outer-list" onClick="event.stopPropagation();showHideLinks('Some Politics');">Some Politics
-<ul id = "Some Politics" class="sub-variable-list" style="display:none">
-<li class = "inner-list" onClick="event.stopPropagation();showHideLinks('National Issues');">National Issues
+<li class = "outer-list" onClick="event.stopPropagation();showHideLinks('National Issues');">National Issues
 <ul id = "National Issues" class="variable-list" style="display:none">
 <li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/NATSPAC">NATSPAC</a>: SPACE EXPLORATION PROGRAM</li>
 <li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/NATENVIR">NATENVIR</a>: IMPROVING & PROTECTING ENVIRONMENT</li>
@@ -338,15 +336,6 @@
 <li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/NATMASS">NATMASS</a>: MASS TRANSPORTATION</li>
 <li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/NATPARK">NATPARK</a>: PARKS AND RECREATION</li>
 <li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/NATSCI">NATSCI</a>: SUPPORTING SCIENTIFIC RESEARCH</li></ul>
-</li>
-<li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Voting History');">Voting History
-<ul id = "Voting History" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/PRES96">PRES96</a>: VOTE FOR CLINTON, DOLE, PEROT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/PRES00">PRES00</a>: VOTE FOR GORE, BUSH, NADER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/PRES04">PRES04</a>: VOTE FOR KERRY, BUSH, NADER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/PRES08">PRES08</a>: VOTE OBAMA OR MCCAIN</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="second/PRES12">PRES12</a>: VOTE OBAMA OR ROMNEY</li></ul>
-</li></ul></li>
 <li class = "outer-list" onClick="event.stopPropagation();showHideLinks('Technology');">Technology
 <ul id = "Technology" class="sub-variable-list" style="display:none">
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Use of Technology');">Use of Technology

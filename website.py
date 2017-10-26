@@ -7,41 +7,47 @@ import numpy as np
 app = flask.Flask(__name__)
 
 @app.route('/')
-def hello():
+def homepage():
     return render_template('index.html')
+    
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.route('/results/<var>')
-def get_results_1_variable(var):
-    ds = datasource.DataSource()
+def getResults1Variable(var):
     validVars = np.load('varList.npy')
     if var not in validVars:
-        return render_template('error.html')
+        return render_template('invalidvariables.html')
     else:
-        ds.runQuery([var, ""])
-        ds.createGraph()
-        queryStats = ds.getStats()
-        return render_template('results.html', 
-                                stats=queryStats, 
-                                var1 = var, var2 = "")
+        return displayResults(var, "")
                                 
 @app.route('/results/<var1>/<var2>')
-def get_results_2_variables(var1, var2):
-    ds = datasource.DataSource()
+def getResults2Variables(var1, var2):
     validVars = np.load('varList.npy')
     if var1 not in validVars or var2 not in validVars:
-        return render_template('error.html')
+        return render_template('invalidvariables.html')
     else:
+        return displayResults(var1, var2)
+        
+        
+                                
+@app.route('/second/<var>')
+def getSecond(var):
+    print(var)
+    return render_template('second.html', var = var)
+    
+def displayResults(var1, var2):
+    try:
+        ds = datasource.DataSource()
         ds.runQuery([var1, var2])
         ds.createGraph()
         queryStats = ds.getStats()
         return render_template('results.html', 
-                                stats=queryStats, 
-                                var1 = var1, var2 = var2)
-                                
-@app.route('/second/<var>')
-def get_second(var):
-    print(var)
-    return render_template('second.html', var = var)
+                              stats=queryStats, 
+                              var1 = var1, var2 = var2)
+    except ValueError:
+        return render_template('novalues.html')
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:

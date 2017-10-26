@@ -1,54 +1,55 @@
-body{
+html, body{
 	margin:0;
 	padding:0;
-    background:#ffffff;
 }
-ul {
+ul.top {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: blue;
 }
+#steps{
+	margin:0;
+	padding:0;
+}
+li a.step{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+	margin:0;
+}
+
 #about{
 	float:right;
 }
 li.menu {
     float: left;
 }
-a.about:hover{
-	
-}
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 40px;
-    text-decoration: none;
-	margin:0;
-}
 
-li.menu a, #about {
-    display: block;
+*{font-family: Cambria;}
+
+li.steps{
+    background-color:blue;
+    border: none;
     color: white;
+    padding: 0px;
+	margin:10px 30px;
     text-align: center;
-    padding: 14px 40px;
     text-decoration: none;
-	margin:0;
+    display: inline-block;
+    font-size: 16px;
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+li.menu a:hover {
     background-color: #111;
 }
 
-#s3 {
-    background-color: #111;
-}
-
-span.steps{
-	display:block;
-	float:right;
+#s3{
+	background-color:#111;
 }
 
 ul.graph-container{

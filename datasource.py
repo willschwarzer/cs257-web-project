@@ -355,9 +355,10 @@ class DataSource:
             plot = sns.heatmap(self.theDataFrame, annot=True, fmt=".01%", 
                                 linewidths=0.5, ax=ax, cmap="Blues")
         else:
-            plot = sns.heatmap(self.theDataFrame, annot=False, fmt="d", 
+            plot = sns.heatmap(self.theDataFrame, annot=False, 
                                 linewidths=0.5, ax=ax, cmap="Blues")
         ax.set(xlabel=xDescription, ylabel=yDescription)
+        ax.set_title("Responses to " + yDescription + " organized by " + xDescription)
         picture = plot.get_figure()
         picture.savefig("static/" + self.primary + "-" + 
                         self.secondary + ".png", bbox_inches = "tight")
@@ -371,6 +372,7 @@ class DataSource:
         ax = sns.barplot(array[0], array[1])
         description = self.descriptionDict[self.primary]
         ax.set(xlabel=description, ylabel = "count")
+        ax.set_title("Responses to " + description)
         # Rotate labels
         for tick in ax.get_xticklabels():
             tick.set_rotation(90)

@@ -13,16 +13,13 @@ ul.top {
 	margin:0;
 	padding:0;
 }
-li.steps{
-    background-color:blue;
-    border: none;
+li a.step{
+    display: block;
     color: white;
-    padding: 10px 10px;
-	margin:10px 30px;
     text-align: center;
+    padding: 14px 40px;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+	margin:0;
 }
 
 #about{
@@ -32,14 +29,18 @@ li.menu {
     float: left;
 }
 
+*{font-family: Cambria;}
 
-li.menu a, #about {
-    display: block;
+li.steps{
+    background-color:blue;
+    border: none;
     color: white;
+    padding: 0px;
+	margin:10px 30px;
     text-align: center;
-    padding: 14px 40px;
     text-decoration: none;
-	margin:0;
+    display: inline-block;
+    font-size: 16px;
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -96,16 +97,16 @@ div.var-data{
 	
 }
 
-.variable-list{
+ul.variable-list{
 	display:none;
+}
+
+ul.var-container{
+	cursor:pointer;
 }
 ul.sub-variable-list{
 	display:none;
 }
-ul.var-container{
-	cursor:pointer;
-}
-
 
 li.inner-list{
 	border-style:outset;

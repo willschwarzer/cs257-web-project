@@ -15,18 +15,18 @@
 		else{
 			obj.style.display= "none"
         }
-	}	
+	}
+	
 </script>
 
   <body>
   
   <nav>
 	<ul class = "top">
-		<li class = "menu" ><a class = "homepage" href = "../../">GSS Dataset</a></li>
-		<li class = "menu" ><a class = "step" href = "../../" id = "s1"> Step 1</a></li>
-		<li class = "menu" ><a class = "step" href = "" id = "s2"> Step 2</a></li>
-		<!--<li class = "menu" ><a class = "step" href = "/../results/{{var}}" id = "s3"> Results</a></li>-->
-		<!--<li id = "about" class = "menu" >About </li>-->
+		<li class = "menu" ><a class = "step" href = "">GSS Dataset</a></li>
+		<li id = "s1" class = "menu" ><a class = "step" href = "../../" > Step 1</a></li>
+		<li id = "s2" class = "menu" ><a class = "step" href = "../../" > Step 2</a></li>
+		<li id = "about" class = "menu" ><a class = "step" href = "../../about" >About</a> </li>
 		
 	</ul>
   </nav>
@@ -47,321 +47,310 @@
 <ul id = "Personal Background" class="sub-variable-list" style="display:none">
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Demographic Info');">Demographic Info
 <ul id = "Demographic Info" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/AGE">AGE</a>: AGE OF RESPONDENT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/BIRTHMO">BIRTHMO</a>: MONTH IN WHICH R WAS BORN</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SEX">SEX</a>: RESPONDENTS SEX</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACE">RACE</a>: RACE OF RESPONDENT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RINCOME">RINCOME</a>: RESPONDENTS INCOME</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/TAX">TAX</a>: RS FEDERAL INCOME TAX</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PARBORN">PARBORN</a>: WERE RS PARENTS BORN IN THIS COUNTRY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/BORN">BORN</a>: WAS R BORN IN THIS COUNTRY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ETHNIC">ETHNIC</a>: COUNTRY OF FAMILY ORIGIN</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/USCITZN">USCITZN</a>: IS R US CITIZEN</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EDUC">EDUC</a>: HIGHEST YEAR OF SCHOOL COMPLETED</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PAEDUC">PAEDUC</a>: HIGHEST YEAR SCHOOL COMPLETED, FATHER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/MAEDUC">MAEDUC</a>: HIGHEST YEAR SCHOOL COMPLETED, MOTHER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/DEGREE">DEGREE</a>: RS HIGHEST DEGREE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/VETYEARS">VETYEARS</a>: YEARS IN ARMED FORCES</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/AGE">AGE</a>: AGE OF RESPONDENT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/BIRTHMO">BIRTHMO</a>: MONTH IN WHICH R WAS BORN</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SEX">SEX</a>: RESPONDENTS SEX</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACE">RACE</a>: RACE OF RESPONDENT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RINCOME">RINCOME</a>: RESPONDENTS INCOME</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/TAX">TAX</a>: RS FEDERAL INCOME TAX</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PARBORN">PARBORN</a>: WERE RS PARENTS BORN IN THIS COUNTRY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/BORN">BORN</a>: WAS R BORN IN THIS COUNTRY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ETHNIC">ETHNIC</a>: COUNTRY OF FAMILY ORIGIN</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/USCITZN">USCITZN</a>: IS R US CITIZEN</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EDUC">EDUC</a>: HIGHEST YEAR OF SCHOOL COMPLETED</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PAEDUC">PAEDUC</a>: HIGHEST YEAR SCHOOL COMPLETED, FATHER</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/MAEDUC">MAEDUC</a>: HIGHEST YEAR SCHOOL COMPLETED, MOTHER</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/DEGREE">DEGREE</a>: RS HIGHEST DEGREE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/VETYEARS">VETYEARS</a>: YEARS IN ARMED FORCES</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Household Info');">Household Info
 <ul id = "Household Info" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FAMGEN">FAMGEN</a>: NUMBER OF FAMILY GENERATIONS IN HOUSEHOLD</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/HHRACE">HHRACE</a>: RACE OF HOUSEHOLD</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/HHTYPE">HHTYPE</a>: HOUSEHOLD TYPE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/HOMPOP">HOMPOP</a>: NUMBER OF PERSONS IN HOUSEHOLD</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RVISITOR">RVISITOR</a>: IS R A VISITOR?</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/VISITORS">VISITORS</a>: NUMBER OF VISITORS IN HOUSEHOLD</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EARNRS">EARNRS</a>: HOW MANY IN FAMILY EARNED MONEY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/INCOME">INCOME</a>: TOTAL FAMILY INCOME</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/DWELLING">DWELLING</a>: TYPE OF STRUCTURE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/DWELNGH">DWELNGH</a>: DWELLING COMPARED TO OTHERS IN NBRHD</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/DWELCITY">DWELCITY</a>: DWELLING COMPARED TO OTHERS IN CITY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/DWELOWN">DWELOWN</a>: DOES R OWN OR RENT HOME?</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FAMGEN">FAMGEN</a>: NUMBER OF FAMILY GENERATIONS IN HOUSEHOLD</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/HHRACE">HHRACE</a>: RACE OF HOUSEHOLD</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/HHTYPE">HHTYPE</a>: HOUSEHOLD TYPE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/HOMPOP">HOMPOP</a>: NUMBER OF PERSONS IN HOUSEHOLD</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RVISITOR">RVISITOR</a>: IS R A VISITOR?</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/VISITORS">VISITORS</a>: NUMBER OF VISITORS IN HOUSEHOLD</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EARNRS">EARNRS</a>: HOW MANY IN FAMILY EARNED MONEY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/INCOME">INCOME</a>: TOTAL FAMILY INCOME</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/DWELLING">DWELLING</a>: TYPE OF STRUCTURE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/DWELNGH">DWELNGH</a>: DWELLING COMPARED TO OTHERS IN NBRHD</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/DWELCITY">DWELCITY</a>: DWELLING COMPARED TO OTHERS IN CITY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/DWELOWN">DWELOWN</a>: DOES R OWN OR RENT HOME?</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Life and Relationships');">Life and Relationships
 <ul id = "Life and Relationships" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/HAPPY">HAPPY</a>: GENERAL HAPPINESS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/HAPMAR">HAPMAR</a>: HAPPINESS OF MARRIAGE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/HEALTH">HEALTH</a>: CONDITION OF HEALTH</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/LIFE">LIFE</a>: IS LIFE EXCITING OR DULL</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/HELPFUL">HELPFUL</a>: PEOPLE HELPFUL OR LOOKING OUT FOR SELVES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FAIR">FAIR</a>: PEOPLE FAIR OR TRY TO TAKE ADVANTAGE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/TRUST">TRUST</a>: CAN PEOPLE BE TRUSTED</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/HAPPY">HAPPY</a>: GENERAL HAPPINESS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/HAPMAR">HAPMAR</a>: HAPPINESS OF MARRIAGE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/HEALTH">HEALTH</a>: CONDITION OF HEALTH</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/LIFE">LIFE</a>: IS LIFE EXCITING OR DULL</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/HELPFUL">HELPFUL</a>: PEOPLE HELPFUL OR LOOKING OUT FOR SELVES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FAIR">FAIR</a>: PEOPLE FAIR OR TRY TO TAKE ADVANTAGE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/TRUST">TRUST</a>: CAN PEOPLE BE TRUSTED</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Religion');">Religion
 <ul id = "Religion" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NUMDAYS">NUMDAYS</a>: NUMBER OF DAYS ATTENDED RELIGIOUS SERVICES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ATTRELIG">ATTRELIG</a>: LAST WEEK ATTENDED RELIGIOUS SERVICES?</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/MEDIAREL">MEDIAREL</a>: WATCH A RELIGIOUS PROGRAM ON TELEVISION-RADIO?</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/OTHREL">OTHREL</a>: ATTEND SOME OTHER TYPE OF RELIGIOUS EVENT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RELIG">RELIG</a>: RS RELIGIOUS PREFERENCE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RELIG16">RELIG16</a>: RELIGION IN WHICH RAISED</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRAY">PRAY</a>: HOW OFTEN DOES R PRAY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NEARGOD">NEARGOD</a>: HOW CLOSE DOES R FEEL TO GOD</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRAYER">PRAYER</a>: BIBLE PRAYER IN PUBLIC SCHOOLS</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NUMDAYS">NUMDAYS</a>: NUMBER OF DAYS ATTENDED RELIGIOUS SERVICES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ATTRELIG">ATTRELIG</a>: LAST WEEK ATTENDED RELIGIOUS SERVICES?</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/MEDIAREL">MEDIAREL</a>: WATCH A RELIGIOUS PROGRAM ON TELEVISION-RADIO?</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/OTHREL">OTHREL</a>: ATTEND SOME OTHER TYPE OF RELIGIOUS EVENT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RELIG">RELIG</a>: RS RELIGIOUS PREFERENCE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RELIG16">RELIG16</a>: RELIGION IN WHICH RAISED</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PRAY">PRAY</a>: HOW OFTEN DOES R PRAY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NEARGOD">NEARGOD</a>: HOW CLOSE DOES R FEEL TO GOD</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PRAYER">PRAYER</a>: BIBLE PRAYER IN PUBLIC SCHOOLS</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Tobacco/Alcohol/Marijuana');">Tobacco/Alcohol/Marijuana
 <ul id = "Tobacco/Alcohol/Marijuana" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/DRINK">DRINK</a>: EVER DRINK ALCOHOLIC BEVERAGES?</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/DRUNK">DRUNK</a>: EVER DRINK TOO MUCH?</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SMOKE">SMOKE</a>: DOES R SMOKE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/QUITSMK">QUITSMK</a>: EVER TRIED TO QUIT SMOKING</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SMOKECIG">SMOKECIG</a>: DOES R SMOKE CIGARETTES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CIGWEEK">CIGWEEK</a>: HAS R SMOKED CIGARETTES IN LAST WEEK</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EVSMOKE">EVSMOKE</a>: HAS R EVER SMOKED</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/GRASS">GRASS</a>: SHOULD MARIJUANA BE MADE LEGAL</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/DRINK">DRINK</a>: EVER DRINK ALCOHOLIC BEVERAGES?</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/DRUNK">DRUNK</a>: EVER DRINK TOO MUCH?</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SMOKE">SMOKE</a>: DOES R SMOKE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/QUITSMK">QUITSMK</a>: EVER TRIED TO QUIT SMOKING</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SMOKECIG">SMOKECIG</a>: DOES R SMOKE CIGARETTES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CIGWEEK">CIGWEEK</a>: HAS R SMOKED CIGARETTES IN LAST WEEK</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EVSMOKE">EVSMOKE</a>: HAS R EVER SMOKED</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/GRASS">GRASS</a>: SHOULD MARIJUANA BE MADE LEGAL</li></ul>
 </li></ul></li>
 <li class = "outer-list" onClick="event.stopPropagation();showHideLinks('Opinions');">Opinions
 <ul id = "Opinions" class="sub-variable-list" style="display:none">
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Voting History');">Voting History
 <ul id = "Voting History" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRES96">PRES96</a>: VOTE FOR CLINTON, DOLE, PEROT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRES00">PRES00</a>: VOTE FOR GORE, BUSH, NADER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRES04">PRES04</a>: VOTE FOR KERRY, BUSH, NADER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRES08">PRES08</a>: VOTE OBAMA OR MCCAIN</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRES12">PRES12</a>: VOTE OBAMA OR ROMNEY</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PRES96">PRES96</a>: VOTE FOR CLINTON, DOLE, PEROT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PRES00">PRES00</a>: VOTE FOR GORE, BUSH, NADER</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PRES04">PRES04</a>: VOTE FOR KERRY, BUSH, NADER</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PRES08">PRES08</a>: VOTE OBAMA OR MCCAIN</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PRES12">PRES12</a>: VOTE OBAMA OR ROMNEY</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Guns');">Guns
 <ul id = "Guns" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/GUNLAW">GUNLAW</a>: FAVOR OR OPPOSE GUN PERMITS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/GUNIMP">GUNIMP</a>: IMPORTANCE OF GUN CONTROL ISSUE TO R</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/GUNINFO">GUNINFO</a>: HOW MUCH INFO DOES R HAVE ON GUN CONTROL</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/GUNFIRM">GUNFIRM</a>: HOW FIRM IS RS OPINION ON GUN CONTROL</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/GUNLAW">GUNLAW</a>: FAVOR OR OPPOSE GUN PERMITS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/GUNIMP">GUNIMP</a>: IMPORTANCE OF GUN CONTROL ISSUE TO R</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/GUNINFO">GUNINFO</a>: HOW MUCH INFO DOES R HAVE ON GUN CONTROL</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/GUNFIRM">GUNFIRM</a>: HOW FIRM IS RS OPINION ON GUN CONTROL</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Feelings about specific Countries');">Feelings about specific Countries
 <ul id = "Feelings about specific Countries" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RUSSIA">RUSSIA</a>: LIKING FOR RUSSIA</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/JAPAN">JAPAN</a>: LIKING FOR JAPAN</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ENGLAND">ENGLAND</a>: LIKING FOR ENGLAND</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CANADA">CANADA</a>: LIKING FOR CANADA</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/BRAZIL">BRAZIL</a>: LIKING FOR BRAZIL</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CHINA">CHINA</a>: LIKING FOR CHINA</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ISRAEL">ISRAEL</a>: LIKING FOR ISRAEL</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EGYPT">EGYPT</a>: LIKING FOR EGYPT</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RUSSIA">RUSSIA</a>: LIKING FOR RUSSIA</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/JAPAN">JAPAN</a>: LIKING FOR JAPAN</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ENGLAND">ENGLAND</a>: LIKING FOR ENGLAND</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CANADA">CANADA</a>: LIKING FOR CANADA</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/BRAZIL">BRAZIL</a>: LIKING FOR BRAZIL</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CHINA">CHINA</a>: LIKING FOR CHINA</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ISRAEL">ISRAEL</a>: LIKING FOR ISRAEL</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EGYPT">EGYPT</a>: LIKING FOR EGYPT</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Feelings about specific Groups');">Feelings about specific Groups
 <ul id = "Feelings about specific Groups" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/LIBTEMP">LIBTEMP</a>: FEELING THERMOMETER -- LIBERALS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONTEMP">CONTEMP</a>: FEELING THERMOMETER -- CONSERVATIVES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PROTTEMP">PROTTEMP</a>: FEELING THERMOMETER -- PROTESTANTS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CATHTEMP">CATHTEMP</a>: FEELING THERMOMETER -- CATHOLICS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/JEWTEMP">JEWTEMP</a>: FEELING THERMOMETER -- JEWS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/MSLMTEMP">MSLMTEMP</a>: FEELING THERMOMETER -- MUSLIMS</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/LIBTEMP">LIBTEMP</a>: FEELING THERMOMETER -- LIBERALS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONTEMP">CONTEMP</a>: FEELING THERMOMETER -- CONSERVATIVES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PROTTEMP">PROTTEMP</a>: FEELING THERMOMETER -- PROTESTANTS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CATHTEMP">CATHTEMP</a>: FEELING THERMOMETER -- CATHOLICS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/JEWTEMP">JEWTEMP</a>: FEELING THERMOMETER -- JEWS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/MSLMTEMP">MSLMTEMP</a>: FEELING THERMOMETER -- MUSLIMS</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Job');">Job
 <ul id = "Job" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/JOBINC">JOBINC</a>: HIGH INCOME</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/JOBSEC">JOBSEC</a>: NO DANGER OF BEING FIRED</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/JOBHOUR">JOBHOUR</a>: SHORT WORKING HOURS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/JOBPROMO">JOBPROMO</a>: CHANCES FOR ADVANCEMENT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/JOBMEANS">JOBMEANS</a>: WORK IMPORTANT AND FEEL ACCOMPLISHMENT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/JOBKEEP">JOBKEEP</a>: JOB SECURITY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/JOBSOC">JOBSOC</a>: USEFUL TO SOCIETY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/JOBSAFE">JOBSAFE</a>: SAFE CONDITIONS</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/JOBINC">JOBINC</a>: HIGH INCOME</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/JOBSEC">JOBSEC</a>: NO DANGER OF BEING FIRED</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/JOBHOUR">JOBHOUR</a>: SHORT WORKING HOURS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/JOBPROMO">JOBPROMO</a>: CHANCES FOR ADVANCEMENT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/JOBMEANS">JOBMEANS</a>: WORK IMPORTANT AND FEEL ACCOMPLISHMENT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/JOBKEEP">JOBKEEP</a>: JOB SECURITY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/JOBSOC">JOBSOC</a>: USEFUL TO SOCIETY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/JOBSAFE">JOBSAFE</a>: SAFE CONDITIONS</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Women');">Women
 <ul id = "Women" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FEHOME">FEHOME</a>: WOMEN TAKE CARE OF HOME NOT COUNTRY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FEWORK">FEWORK</a>: SHOULD WOMEN WORK</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FEPRES">FEPRES</a>: VOTE FOR WOMAN PRESIDENT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FEPOL">FEPOL</a>: WOMEN NOT SUITED FOR POLITICS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FEPOLY">FEPOLY</a>: MEN OR WOMEN BETTER SUITED FOR POLITICS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FEIMP">FEIMP</a>: IMPORTANCE OF WOMENS RIGHTS ISSUE TO R</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FEGIVE">FEGIVE</a>: HAS R GIVEN MONEY TO WOMENS RIGHTS ORGS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FECHLD">FECHLD</a>: MOTHER WORKING DOESNT HURT CHILDREN</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FEHELP">FEHELP</a>: WIFE SHOULD HELP HUSBANDS CAREER FIRST</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FEPRESCH">FEPRESCH</a>: PRESCHOOL KIDS SUFFER IF MOTHER WORKS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/FEFAM">FEFAM</a>: BETTER FOR MAN TO WORK, WOMAN TEND HOME</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FEHOME">FEHOME</a>: WOMEN TAKE CARE OF HOME NOT COUNTRY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FEWORK">FEWORK</a>: SHOULD WOMEN WORK</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FEPRES">FEPRES</a>: VOTE FOR WOMAN PRESIDENT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FEPOL">FEPOL</a>: WOMEN NOT SUITED FOR POLITICS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FEPOLY">FEPOLY</a>: MEN OR WOMEN BETTER SUITED FOR POLITICS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FEIMP">FEIMP</a>: IMPORTANCE OF WOMENS RIGHTS ISSUE TO R</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FEGIVE">FEGIVE</a>: HAS R GIVEN MONEY TO WOMENS RIGHTS ORGS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FECHLD">FECHLD</a>: MOTHER WORKING DOESNT HURT CHILDREN</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FEHELP">FEHELP</a>: WIFE SHOULD HELP HUSBANDS CAREER FIRST</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FEPRESCH">FEPRESCH</a>: PRESCHOOL KIDS SUFFER IF MOTHER WORKS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/FEFAM">FEFAM</a>: BETTER FOR MAN TO WORK, WOMAN TEND HOME</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Abortion');">Abortion
 <ul id = "Abortion" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABDEFECT">ABDEFECT</a>: STRONG CHANCE OF SERIOUS DEFECT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABNOMORE">ABNOMORE</a>: MARRIED--WANTS NO MORE CHILDREN</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABHLTH">ABHLTH</a>: WOMANS HEALTH SERIOUSLY ENDANGERED</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABPOOR">ABPOOR</a>: LOW INCOME--CANT AFFORD MORE CHILDREN</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABRAPE">ABRAPE</a>: PREGNANT AS RESULT OF RAPE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABSINGLE">ABSINGLE</a>: NOT MARRIED</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABANY">ABANY</a>: ABORTION IF WOMAN WANTS FOR ANY REASON</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABORCT">ABORCT</a>: HEARD SUPREME COURT DECISION ON ABORTION</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABIMP">ABIMP</a>: IMPORTANCE OF ABORTION ISSUE TO R</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABINFO">ABINFO</a>: HOW MUCH INFO DOES R HAVE ON ABORTION</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABSPNO">ABSPNO</a>: ABORTION IF HUSBAND OPPOSES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ABFIRM">ABFIRM</a>: HOW FIRM IS RS OPINION ON ABORTION</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABDEFECT">ABDEFECT</a>: STRONG CHANCE OF SERIOUS DEFECT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABNOMORE">ABNOMORE</a>: MARRIED--WANTS NO MORE CHILDREN</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABHLTH">ABHLTH</a>: WOMANS HEALTH SERIOUSLY ENDANGERED</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABPOOR">ABPOOR</a>: LOW INCOME--CANT AFFORD MORE CHILDREN</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABRAPE">ABRAPE</a>: PREGNANT AS RESULT OF RAPE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABSINGLE">ABSINGLE</a>: NOT MARRIED</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABANY">ABANY</a>: ABORTION IF WOMAN WANTS FOR ANY REASON</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABORCT">ABORCT</a>: HEARD SUPREME COURT DECISION ON ABORTION</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABIMP">ABIMP</a>: IMPORTANCE OF ABORTION ISSUE TO R</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABINFO">ABINFO</a>: HOW MUCH INFO DOES R HAVE ON ABORTION</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABSPNO">ABSPNO</a>: ABORTION IF HUSBAND OPPOSES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ABFIRM">ABFIRM</a>: HOW FIRM IS RS OPINION ON ABORTION</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('First Amendment');">First Amendment
 <ul id = "First Amendment" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SPKATH">SPKATH</a>: ALLOW ANTI-RELIGIONIST TO SPEAK</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SPKRAC">SPKRAC</a>: ALLOW RACIST TO SPEAK</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SPKSOC">SPKSOC</a>: ALLOW SOCIALIST TO SPEAK</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SPKCOM">SPKCOM</a>: ALLOW COMMUNIST TO SPEAK</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SPKMIL">SPKMIL</a>: ALLOW MILITARIST TO SPEAK</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SPKHOMO">SPKHOMO</a>: ALLOW HOMOSEXUAL TO SPEAK</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SPKATH">SPKATH</a>: ALLOW ANTI-RELIGIONIST TO SPEAK</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SPKRAC">SPKRAC</a>: ALLOW RACIST TO SPEAK</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SPKSOC">SPKSOC</a>: ALLOW SOCIALIST TO SPEAK</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SPKCOM">SPKCOM</a>: ALLOW COMMUNIST TO SPEAK</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SPKMIL">SPKMIL</a>: ALLOW MILITARIST TO SPEAK</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SPKHOMO">SPKHOMO</a>: ALLOW HOMOSEXUAL TO SPEAK</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Death Penalty');">Death Penalty
 <ul id = "Death Penalty" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CAPPUN">CAPPUN</a>: FAVOR OR OPPOSE DEATH PENALTY FOR MURDER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CAPPUN2">CAPPUN2</a>: DOES R FAVOR CAPITAL PUNISHMENT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CAPIMP">CAPIMP</a>: IMPORTANCE OF DEATH PENALTY ISSUE TO R</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CAPINFO">CAPINFO</a>: HOW MUCH INFO R HAS ON DEATH PENALTY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CAPFIRM">CAPFIRM</a>: HOW FIRM IS RS OPINION OF DEATH PENALTY</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CAPPUN">CAPPUN</a>: FAVOR OR OPPOSE DEATH PENALTY FOR MURDER</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CAPPUN2">CAPPUN2</a>: DOES R FAVOR CAPITAL PUNISHMENT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CAPIMP">CAPIMP</a>: IMPORTANCE OF DEATH PENALTY ISSUE TO R</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CAPINFO">CAPINFO</a>: HOW MUCH INFO R HAS ON DEATH PENALTY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CAPFIRM">CAPFIRM</a>: HOW FIRM IS RS OPINION OF DEATH PENALTY</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Death and Suicide');">Death and Suicide
 <ul id = "Death and Suicide" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/LETDIE1">LETDIE1</a>: ALLOW INCURABLE PATIENTS TO DIE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SUICIDE1">SUICIDE1</a>: SUICIDE IF INCURABLE DISEASE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SUICIDE2">SUICIDE2</a>: SUICIDE IF BANKRUPT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SUICIDE3">SUICIDE3</a>: SUICIDE IF DISHONORED FAMILY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SUICIDE4">SUICIDE4</a>: SUICIDE IF TIRED OF LIVING</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/LETDIE1">LETDIE1</a>: ALLOW INCURABLE PATIENTS TO DIE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SUICIDE1">SUICIDE1</a>: SUICIDE IF INCURABLE DISEASE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SUICIDE2">SUICIDE2</a>: SUICIDE IF BANKRUPT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SUICIDE3">SUICIDE3</a>: SUICIDE IF DISHONORED FAMILY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SUICIDE4">SUICIDE4</a>: SUICIDE IF TIRED OF LIVING</li></ul>
 </li></ul></li>
 <li class = "outer-list" onClick="event.stopPropagation();showHideLinks('Government');">Government
 <ul id = "Government" class="sub-variable-list" style="display:none">
-<li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Trust in Gov't');">Trust in Gov't
-<ul id = "Trust in Gov't" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ALIENAT1">ALIENAT1</a>: PEOPLE RUNNING COUNTRY DONT CARE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ALIENAT2">ALIENAT2</a>: RICH GET RICHER, POOR POORER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ALIENAT3">ALIENAT3</a>: WHAT YOU THINK DOESNT COUNT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ALIENAT4">ALIENAT4</a>: YOU'RE LEFT OUT OF THINGS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ALIENAT5">ALIENAT5</a>: POWERFUL PEOPLE TAKE ADVANTAGE OF YOU</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/ALIENAT6">ALIENAT6</a>: PEOPLE IN WASH D.C. ARE OUT OF TOUCH</li></ul>
+<li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Trust in Govt');">Trust in Government
+<ul id = "Trust in Govt" class="variable-list" style="display:none">
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ALIENAT1">ALIENAT1</a>: PEOPLE RUNNING COUNTRY DONT CARE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ALIENAT2">ALIENAT2</a>: RICH GET RICHER, POOR POORER</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ALIENAT3">ALIENAT3</a>: WHAT YOU THINK DOESNT COUNT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ALIENAT4">ALIENAT4</a>: YOU'RE LEFT OUT OF THINGS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ALIENAT5">ALIENAT5</a>: POWERFUL PEOPLE TAKE ADVANTAGE OF YOU</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/ALIENAT6">ALIENAT6</a>: PEOPLE IN WASH D.C. ARE OUT OF TOUCH</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Government Obligations');">Government Obligations
 <ul id = "Government Obligations" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/GOVCARE">GOVCARE</a>: GOVT CONCERN FOR SOCIAL WELFARE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/HELPPOOR">HELPPOOR</a>: SHOULD GOVT IMPROVE STANDARD OF LIVING?</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/HELPNOT">HELPNOT</a>: SHOULD GOVT DO MORE OR LESS?</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/HELPSICK">HELPSICK</a>: SHOULD GOVT HELP PAY FOR MEDICAL CARE?</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/HELPBLK">HELPBLK</a>: SHOULD GOVT AID BLACKS?</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/GOVCARE">GOVCARE</a>: GOVT CONCERN FOR SOCIAL WELFARE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/HELPPOOR">HELPPOOR</a>: SHOULD GOVT IMPROVE STANDARD OF LIVING?</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/HELPNOT">HELPNOT</a>: SHOULD GOVT DO MORE OR LESS?</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/HELPSICK">HELPSICK</a>: SHOULD GOVT HELP PAY FOR MEDICAL CARE?</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/HELPBLK">HELPBLK</a>: SHOULD GOVT AID BLACKS?</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Government Secrecy');">Government Secrecy
 <ul id = "Government Secrecy" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/KNOMENTL">KNOMENTL</a>: GOV SHOULD HAVE THE RIGHT TO KNOW</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/TAKEARMS">TAKEARMS</a>: PUNISHMENT FOR STEALING AND SELLING WEAPONS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/LEAKINFO">LEAKINFO</a>: PUNISHMENT FOR OFFICAL LEAKING INFORMATION</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SPYENEMY">SPYENEMY</a>: PUNISHMENT FOR SELLING SECRETS TO HOSTILE FOREIGN GOV</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SPYFREND">SPYFREND</a>: PUNISHMENT FOR SELLING SECRETS TO FRIEND FOREIGN GOV</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/TAKETRCK">TAKETRCK</a>: PUNISHMENT FOR STEALING AND SELLING TRUCK PARTS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PUNARMS">PUNARMS</a>: PUNISHMENT STEALING AND SELLING ARMS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PUNLEAK">PUNLEAK</a>: PUNISHMENT LEAKING SENSITIVE INFORMATION</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/KNOMENTL">KNOMENTL</a>: GOV SHOULD HAVE THE RIGHT TO KNOW</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/TAKEARMS">TAKEARMS</a>: PUNISHMENT FOR STEALING AND SELLING WEAPONS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/LEAKINFO">LEAKINFO</a>: PUNISHMENT FOR OFFICAL LEAKING INFORMATION</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SPYENEMY">SPYENEMY</a>: PUNISHMENT FOR SELLING SECRETS TO HOSTILE FOREIGN GOV</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SPYFREND">SPYFREND</a>: PUNISHMENT FOR SELLING SECRETS TO FRIEND FOREIGN GOV</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/TAKETRCK">TAKETRCK</a>: PUNISHMENT FOR STEALING AND SELLING TRUCK PARTS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PUNARMS">PUNARMS</a>: PUNISHMENT STEALING AND SELLING ARMS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/PUNLEAK">PUNLEAK</a>: PUNISHMENT LEAKING SENSITIVE INFORMATION</li></ul>
 </li></ul></li>
 <li class = "outer-list" onClick="event.stopPropagation();showHideLinks('Societal Views');">Societal Views
 <ul id = "Societal Views" class="sub-variable-list" style="display:none">
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Social Equality');">Social Equality
 <ul id = "Social Equality" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EQUAL1">EQUAL1</a>: EVERYONE SHOULD LOOK OUT FOR SELF</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EQUAL2">EQUAL2</a>: BUSINESS PROFITS BENEFIT ALL</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EQUAL3">EQUAL3</a>: GOVT SHLD INSURE JOBS AND STABLE PRICES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EQUAL4">EQUAL4</a>: RESPONSIBILITY OF GOVT TO MEET NEEDS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EQUAL5">EQUAL5</a>: SOCIAL WELFARE BENEFITS ARE DISINCENTIVE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EQUAL6">EQUAL6</a>: ONE IS ABLE TO LIVE WELL IN AMERICA</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EQUAL7">EQUAL7</a>: BUSINESS PROFITS ARE DISTRIBUTED FAIRLY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EQUAL8">EQUAL8</a>: SOCIAL STANDING DUE TO ABILITY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EQWLTH">EQWLTH</a>: SHOULD GOVT REDUCE INCOME DIFFERENCES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EQWLTHY">EQWLTHY</a>: GOVT REDUCE INCOME DIFFERENCES-VERSION Y</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EQUAL1">EQUAL1</a>: EVERYONE SHOULD LOOK OUT FOR SELF</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EQUAL2">EQUAL2</a>: BUSINESS PROFITS BENEFIT ALL</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EQUAL3">EQUAL3</a>: GOVT SHLD INSURE JOBS AND STABLE PRICES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EQUAL4">EQUAL4</a>: RESPONSIBILITY OF GOVT TO MEET NEEDS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EQUAL5">EQUAL5</a>: SOCIAL WELFARE BENEFITS ARE DISINCENTIVE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EQUAL6">EQUAL6</a>: ONE IS ABLE TO LIVE WELL IN AMERICA</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EQUAL7">EQUAL7</a>: BUSINESS PROFITS ARE DISTRIBUTED FAIRLY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EQUAL8">EQUAL8</a>: SOCIAL STANDING DUE TO ABILITY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EQWLTH">EQWLTH</a>: SHOULD GOVT REDUCE INCOME DIFFERENCES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EQWLTHY">EQWLTHY</a>: GOVT REDUCE INCOME DIFFERENCES-VERSION Y</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Social Class');">Social Class
 <ul id = "Social Class" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/USCLASS1">USCLASS1</a>: TRADITIONAL CLASS DIVISIONS STILL REMAIN</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/USCLASS2">USCLASS2</a>: ACHIEVEMENT DEPENDS ON FAMILY BACKGROUND</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/USCLASS3">USCLASS3</a>: ACHIEVEMENT DEPENDS ON EDUC AND ABILITY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/USCLASS4">USCLASS4</a>: ONES OWN EFFORTS DONT COUNT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/USCLASS5">USCLASS5</a>: PERSONAL INCOME NOT DETERMINED BY WORK</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/USCLASS6">USCLASS6</a>: DIFFERENCES IN CLASS ARE AN INCENTIVE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/USCLASS7">USCLASS7</a>: DIFFERENCES IN CLASS REFLECT OWN EFFORT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/USCLASS8">USCLASS8</a>: SOCIAL DIFFERENCES ARE ACCEPTABLE</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/USCLASS1">USCLASS1</a>: TRADITIONAL CLASS DIVISIONS STILL REMAIN</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/USCLASS2">USCLASS2</a>: ACHIEVEMENT DEPENDS ON FAMILY BACKGROUND</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/USCLASS3">USCLASS3</a>: ACHIEVEMENT DEPENDS ON EDUC AND ABILITY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/USCLASS4">USCLASS4</a>: ONES OWN EFFORTS DONT COUNT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/USCLASS5">USCLASS5</a>: PERSONAL INCOME NOT DETERMINED BY WORK</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/USCLASS6">USCLASS6</a>: DIFFERENCES IN CLASS ARE AN INCENTIVE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/USCLASS7">USCLASS7</a>: DIFFERENCES IN CLASS REFLECT OWN EFFORT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/USCLASS8">USCLASS8</a>: SOCIAL DIFFERENCES ARE ACCEPTABLE</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Civic Obligation');">Civic Obligation
 <ul id = "Civic Obligation" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/OBVOTE">OBVOTE</a>: OBLIGATION--VOTING IN ELECTIONS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/OBVOL">OBVOL</a>: OBLIGATION--COMMUNITY SERVICE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/OBJURY">OBJURY</a>: OBLIGATION--JURY DUTY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/OB911">OB911</a>: OBLIGATION--REPORTING A CRIME</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/OBENG">OBENG</a>: OBLIGATION--BEING ABLE TO SPEAK ENGLISH</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/OBKNOW">OBKNOW</a>: OBLIGATION--KEEPING INFORMED</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/OBVOTE">OBVOTE</a>: OBLIGATION--VOTING IN ELECTIONS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/OBVOL">OBVOL</a>: OBLIGATION--COMMUNITY SERVICE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/OBJURY">OBJURY</a>: OBLIGATION--JURY DUTY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/OB911">OB911</a>: OBLIGATION--REPORTING A CRIME</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/OBENG">OBENG</a>: OBLIGATION--BEING ABLE TO SPEAK ENGLISH</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/OBKNOW">OBKNOW</a>: OBLIGATION--KEEPING INFORMED</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Institutional Trust');">Institutional Trust
 <ul id = "Institutional Trust" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONFINAN">CONFINAN</a>: CONFID IN BANKS & FINANCIAL INSTITUTIONS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONBUS">CONBUS</a>: CONFIDENCE IN MAJOR COMPANIES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONCLERG">CONCLERG</a>: CONFIDENCE IN ORGANIZED RELIGION</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONEDUC">CONEDUC</a>: CONFIDENCE IN EDUCATION</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONFED">CONFED</a>: CONFID. IN EXEC BRANCH OF FED GOVT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONLABOR">CONLABOR</a>: CONFIDENCE IN ORGANIZED LABOR</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONPRESS">CONPRESS</a>: CONFIDENCE IN PRESS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONMEDIC">CONMEDIC</a>: CONFIDENCE IN MEDICINE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONTV">CONTV</a>: CONFIDENCE IN TELEVISION</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONJUDGE">CONJUDGE</a>: CONFID. IN UNITED STATES SUPREME COURT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONSCI">CONSCI</a>: CONFIDENCE IN SCIENTIFIC COMMUNITY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONLEGIS">CONLEGIS</a>: CONFIDENCE IN CONGRESS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CONARMY">CONARMY</a>: CONFIDENCE IN MILITARY</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONFINAN">CONFINAN</a>: CONFID IN BANKS & FINANCIAL INSTITUTIONS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONBUS">CONBUS</a>: CONFIDENCE IN MAJOR COMPANIES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONCLERG">CONCLERG</a>: CONFIDENCE IN ORGANIZED RELIGION</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONEDUC">CONEDUC</a>: CONFIDENCE IN EDUCATION</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONFED">CONFED</a>: CONFID. IN EXEC BRANCH OF FED GOVT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONLABOR">CONLABOR</a>: CONFIDENCE IN ORGANIZED LABOR</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONPRESS">CONPRESS</a>: CONFIDENCE IN PRESS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONMEDIC">CONMEDIC</a>: CONFIDENCE IN MEDICINE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONTV">CONTV</a>: CONFIDENCE IN TELEVISION</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONJUDGE">CONJUDGE</a>: CONFID. IN UNITED STATES SUPREME COURT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONSCI">CONSCI</a>: CONFIDENCE IN SCIENTIFIC COMMUNITY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONLEGIS">CONLEGIS</a>: CONFIDENCE IN CONGRESS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CONARMY">CONARMY</a>: CONFIDENCE IN MILITARY</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Race Relations');">Race Relations
 <ul id = "Race Relations" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACMAR">RACMAR</a>: FAVOR LAW AGAINST RACIAL INTERMARRIAGE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACDIN">RACDIN</a>: OBJECT TO OPP. RACE HOME FOR DINNER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACPUSH">RACPUSH</a>: BLACKS SHOULDNT PUSH</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACCHURH">RACCHURH</a>: ATTEND CHURCH WITH OTHER RACE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACHISCH">RACHISCH</a>: HOW INTEGRATED WAS RS HIGH SCHOOL</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACFEW">RACFEW</a>: CHILDREN TO SCHOOL WITH OPPOSITE RACE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACMOST">RACMOST</a>: CHILDREN TO SCHOOL MOSTLY OPPOSITE RACE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACPRES">RACPRES</a>: WOULD VOTE FOR BLACK PRESIDENT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/BUSING">BUSING</a>: ATTITUDE TOWARD RACIAL BUSING</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACPARTY">RACPARTY</a>: WHICH PARTY HELPS BLACKS MORE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACIMP">RACIMP</a>: IMPORTANCE OF RACE RELATIONS ISSUES TO R</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACINFO">RACINFO</a>: HOW MUCH INFO DOES R HAVE ON RACE ISSUES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACFIRM">RACFIRM</a>: HOW FIRM IS RS OPINION ON RACIAL ISSUES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACCARE">RACCARE</a>: RS CONCERN ABOUT RACIAL ISSUES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/RACGIVE">RACGIVE</a>: HAS R GIVEN MONEY TO RACIAL ORGS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/AFFRMACT">AFFRMACT</a>: FAVOR PREFERENCE IN HIRING BLACKS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/BLKSIMP">BLKSIMP</a>: HAVE CONDITIONS FOR BLACKS IMPROVED</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACMAR">RACMAR</a>: FAVOR LAW AGAINST RACIAL INTERMARRIAGE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACDIN">RACDIN</a>: OBJECT TO OPP. RACE HOME FOR DINNER</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACPUSH">RACPUSH</a>: BLACKS SHOULDNT PUSH</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACCHURH">RACCHURH</a>: ATTEND CHURCH WITH OTHER RACE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACHISCH">RACHISCH</a>: HOW INTEGRATED WAS RS HIGH SCHOOL</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACFEW">RACFEW</a>: CHILDREN TO SCHOOL WITH OPPOSITE RACE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACMOST">RACMOST</a>: CHILDREN TO SCHOOL MOSTLY OPPOSITE RACE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACPRES">RACPRES</a>: WOULD VOTE FOR BLACK PRESIDENT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/BUSING">BUSING</a>: ATTITUDE TOWARD RACIAL BUSING</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACPARTY">RACPARTY</a>: WHICH PARTY HELPS BLACKS MORE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACIMP">RACIMP</a>: IMPORTANCE OF RACE RELATIONS ISSUES TO R</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACINFO">RACINFO</a>: HOW MUCH INFO DOES R HAVE ON RACE ISSUES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACFIRM">RACFIRM</a>: HOW FIRM IS RS OPINION ON RACIAL ISSUES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACCARE">RACCARE</a>: RS CONCERN ABOUT RACIAL ISSUES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/RACGIVE">RACGIVE</a>: HAS R GIVEN MONEY TO RACIAL ORGS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/AFFRMACT">AFFRMACT</a>: FAVOR PREFERENCE IN HIRING BLACKS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/BLKSIMP">BLKSIMP</a>: HAVE CONDITIONS FOR BLACKS IMPROVED</li></ul>
 </li></ul></li>
-<li class = "outer-list" onClick="event.stopPropagation();showHideLinks('Some Politics');">Some Politics
-<ul id = "Some Politics" class="sub-variable-list" style="display:none">
-<li class = "inner-list" onClick="event.stopPropagation();showHideLinks('National Issues');">National Issues
+<li class = "outer-list" onClick="event.stopPropagation();showHideLinks('National Issues');">National Issues
 <ul id = "National Issues" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATSPAC">NATSPAC</a>: SPACE EXPLORATION PROGRAM</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATENVIR">NATENVIR</a>: IMPROVING & PROTECTING ENVIRONMENT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATHEAL">NATHEAL</a>: IMPROVING & PROTECTING NATIONS HEALTH</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATCITY">NATCITY</a>: SOLVING PROBLEMS OF BIG CITIES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATCRIME">NATCRIME</a>: HALTING RISING CRIME RATE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATDRUG">NATDRUG</a>: DEALING WITH DRUG ADDICTION</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATEDUC">NATEDUC</a>: IMPROVING NATIONS EDUCATION SYSTEM</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATRACE">NATRACE</a>: IMPROVING THE CONDITIONS OF BLACKS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATARMS">NATARMS</a>: MILITARY, ARMAMENTS, AND DEFENSE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATAID">NATAID</a>: FOREIGN AID</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATFARE">NATFARE</a>: WELFARE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATROAD">NATROAD</a>: HIGHWAYS AND BRIDGES</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATSOC">NATSOC</a>: SOCIAL SECURITY</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATMASS">NATMASS</a>: MASS TRANSPORTATION</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATPARK">NATPARK</a>: PARKS AND RECREATION</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/NATSCI">NATSCI</a>: SUPPORTING SCIENTIFIC RESEARCH</li></ul>
-</li>
-<li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Voting History');">Voting History
-<ul id = "Voting History" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRES96">PRES96</a>: VOTE FOR CLINTON, DOLE, PEROT</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRES00">PRES00</a>: VOTE FOR GORE, BUSH, NADER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRES04">PRES04</a>: VOTE FOR KERRY, BUSH, NADER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRES08">PRES08</a>: VOTE OBAMA OR MCCAIN</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/PRES12">PRES12</a>: VOTE OBAMA OR ROMNEY</li></ul>
-</li></ul></li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATSPAC">NATSPAC</a>: SPACE EXPLORATION PROGRAM</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATENVIR">NATENVIR</a>: IMPROVING & PROTECTING ENVIRONMENT</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATHEAL">NATHEAL</a>: IMPROVING & PROTECTING NATIONS HEALTH</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATCITY">NATCITY</a>: SOLVING PROBLEMS OF BIG CITIES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATCRIME">NATCRIME</a>: HALTING RISING CRIME RATE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATDRUG">NATDRUG</a>: DEALING WITH DRUG ADDICTION</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATEDUC">NATEDUC</a>: IMPROVING NATIONS EDUCATION SYSTEM</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATRACE">NATRACE</a>: IMPROVING THE CONDITIONS OF BLACKS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATARMS">NATARMS</a>: MILITARY, ARMAMENTS, AND DEFENSE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATAID">NATAID</a>: FOREIGN AID</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATFARE">NATFARE</a>: WELFARE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATROAD">NATROAD</a>: HIGHWAYS AND BRIDGES</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATSOC">NATSOC</a>: SOCIAL SECURITY</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATMASS">NATMASS</a>: MASS TRANSPORTATION</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATPARK">NATPARK</a>: PARKS AND RECREATION</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/NATSCI">NATSCI</a>: SUPPORTING SCIENTIFIC RESEARCH</li></ul>
 <li class = "outer-list" onClick="event.stopPropagation();showHideLinks('Technology');">Technology
 <ul id = "Technology" class="sub-variable-list" style="display:none">
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Use of Technology');">Use of Technology
 <ul id = "Use of Technology" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/COMPUSE">COMPUSE</a>: R USE COMPUTER</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/WEBMOB">WEBMOB</a>: R USES HOME INTERNET THROUGH MOBILE DEVICE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EMAILMIN">EMAILMIN</a>: EMAIL MINUTES PER WEEK</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/EMAILHR">EMAILHR</a>: EMAIL HOURS PER WEEK</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/USEWWW">USEWWW</a>: R USE WWW OTHER THAN EMAIL</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/WWWHR">WWWHR</a>: WWW HOURS PER WEEK</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/WWWMIN">WWWMIN</a>: WWW MINUTES PER WEEK</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/COMPUSE">COMPUSE</a>: R USE COMPUTER</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/WEBMOB">WEBMOB</a>: R USES HOME INTERNET THROUGH MOBILE DEVICE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EMAILMIN">EMAILMIN</a>: EMAIL MINUTES PER WEEK</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/EMAILHR">EMAILHR</a>: EMAIL HOURS PER WEEK</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/USEWWW">USEWWW</a>: R USE WWW OTHER THAN EMAIL</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/WWWHR">WWWHR</a>: WWW HOURS PER WEEK</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/WWWMIN">WWWMIN</a>: WWW MINUTES PER WEEK</li></ul>
 </li>
 <li class = "inner-list" onClick="event.stopPropagation();showHideLinks('Web Use');">Web Use
 <ul id = "Web Use" class="variable-list" style="display:none">
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/DRCTLINK">DRCTLINK</a>: HOW OFTEN R LINKS FROM HOMEPAGE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/TYPEURL">TYPEURL</a>: HOW OFTEN R TYPES URLS BY SELF</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/SRCHENG">SRCHENG</a>: HOW OFTEN R USES SEARCH ENGINE</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/BOOKMARK">BOOKMARK</a>: HOW OFTEN R USES BOOKMARKS</li>
-<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="/../results/{{var}}/CATDRCTY">CATDRCTY</a>: HOW OFTEN R USES WEB DIRECTORIES</li></ul>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/DRCTLINK">DRCTLINK</a>: HOW OFTEN R LINKS FROM HOMEPAGE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/TYPEURL">TYPEURL</a>: HOW OFTEN R TYPES URLS BY SELF</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/SRCHENG">SRCHENG</a>: HOW OFTEN R USES SEARCH ENGINE</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/BOOKMARK">BOOKMARK</a>: HOW OFTEN R USES BOOKMARKS</li>
+<li class = "individual-variable" onclick = "event.stopPropagation();"><a href="../../results/{{var}}/CATDRCTY">CATDRCTY</a>: HOW OFTEN R USES WEB DIRECTORIES</li></ul>
 </li></ul></li>
 				
 			</ul>
