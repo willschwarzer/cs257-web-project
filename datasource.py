@@ -13,11 +13,11 @@ def main():
     # Sample queries
     querySingleCategorical = ["ETHNIC", "", "", ""]
     querySingleContinuous = ["AGE", "", "", ""]
-    queryDoubleCategorical = ["ETHNIC", "RACE", "", ""]
+    queryDoubleCategorical = ["DRINK", "RACE", "", ""]
     queryCategoricalvContinuous = ["AGE", "EDUC", "", ""]
     # Running the queries
     ds = DataSource()
-    ds.runQuery(queryCategoricalvContinuous)
+    ds.runQuery(queryDoubleCategorical)
     print(ds.getStats())
     ds.createGraph()
 
@@ -34,19 +34,23 @@ class DataSource:
         # Future pandas objects
         theDataFrame = None
         theSeries = None
-        # Future data array
+        # Future data arrays
         dataArray = []
+        percentageArray = []
         # Query info
         primary = secondary = control1 = control2 = ""
         # These have self explicit because for some reason Python was
         # interpreting dataTypeSecondary as a class variable
         self.dataTypePrimary = self.dataTypeSecondary = ""
+        # Dictionary of descriptions, used to create better graph labels
+        self.descriptionDict = np.load("descriptionDict.npy").item()
 
     def runQuery(self, query):
         """Runs the given query on the database and stores the results as
         instance variables."""
         self.parseQueryVariables(query)
         self.dataArray = self.getDataArray()
+        self.percentageArray = self.getPercentageArray(self.dataArray)
         
     def getStats(self):
         """Currently just returns number of respondents to a given query."""
@@ -88,6 +92,22 @@ class DataSource:
         else:
             return self.dictionaryToArrayOneVariable(dict)   
             
+    def getPercentageArray(self, dataArray):
+        percentageArray = [dataArray[0]]
+        columnSums = []
+        for i in range(1, len(dataArray[0])):
+            columnSum = 0
+            for row in dataArray[1:]:
+                columnSum += row[i]
+            columnSums.append(columnSum)
+        for i in range(1, len(dataArray)):
+            newRow = [dataArray[i][0]]
+            for j in range(1, len(dataArray[0])):
+                newRow.append(dataArray[i][j]/columnSums[j-1])
+            percentageArray.append(newRow)
+        return percentageArray
+                
+            
     def dictionaryToArrayOneVariable(self, dict):
         """Takes the dictonary of combinations of responses and the 
         number of times those combos occur, and generates a list in a format
@@ -100,7 +120,7 @@ class DataSource:
             try:
                 # If that response appeared, add it
                 counts.append(dict[(response,)])
-                values.append(response)
+                values.append(response.title())
             except KeyError:
                 # That response didn't actually appear; ignore it
                 continue
@@ -116,11 +136,13 @@ class DataSource:
         self.dataTypeSecondary = self.getDataType(self.secondary, dict)
         orderedRow = self.getOrderedVariables(self.primary, dict)
         orderedColumn = self.getOrderedVariables(self.secondary, dict)
+        # Lowercase values look better in the graph; also applies to line 145
+        orderedColumnLowerCase = [value.title() for value in orderedColumn]
         array = []
-        array.append([""] + orderedColumn)
+        array.append([""] + orderedColumnLowerCase)
         for rowvar in orderedRow:
             nextRow = []
-            nextRow.append(rowvar)
+            nextRow.append(rowvar.title())
             for column in orderedColumn:
                nextRow.append(self.fetchCountTwoVariables(dict, rowvar, column))
             array.append(nextRow)
@@ -202,12 +224,12 @@ class DataSource:
                 temp = x[1]
                 temp = temp.replace('"', '')
                 vars.append(temp)
-            return self.removeExtraVariables(vars, variableOrdersDict)[::-1]
+            return self.removeExtraVariables(vars, responses)
         else:
             return self.getVarKeys(varName, responses)
             
     def getVarKeys(self, varName, dict):
-        """For a given variable in the input, return a list of all of the 
+        """For a continuous variable , return a list of all of the 
         responses that correspond to that variable form the results"""
         orderedValues, continuousValues, categoricalValues = [], [], []
         keys = dict.keys()
@@ -278,8 +300,8 @@ class DataSource:
         keys = dict.keys()
         for key in keys:
             if s in key:
-                return False
-        return True
+                return True
+        return False
     
     def removeExtraVariables(self, l, dict):
         """Some variable queries have variables we don't want to crosstab
@@ -326,27 +348,19 @@ class DataSource:
     def getHeatMap(self, theDataFrame):
         """Creates a heatmap for two categorical variable queries."""
         f, ax = plt.subplots(figsize=(12, 6))
-        self.theDataFrame = self.categoricalArrayToDataFrame(self.dataArray)
+        self.theDataFrame = self.categoricalArrayToDataFrame(self.percentageArray)
+        xDescription = self.descriptionDict[self.secondary]
+        yDescription = self.descriptionDict[self.primary]
         if self.dataTypePrimary == self.dataTypeSecondary == "categorical":
-            plot = sns.heatmap(self.theDataFrame, annot=True, fmt="d", 
+            plot = sns.heatmap(self.theDataFrame, annot=True, fmt=".01%", 
                                 linewidths=0.5, ax=ax, cmap="Blues")
         else:
             plot = sns.heatmap(self.theDataFrame, annot=False, fmt="d", 
                                 linewidths=0.5, ax=ax, cmap="Blues")
-        ax.set(xlabel=self.secondary, ylabel=self.primary)
+        ax.set(xlabel=xDescription, ylabel=yDescription)
         picture = plot.get_figure()
-        picture.savefig("static/" + self.primary + "-" + self.secondary + ".png", bbox_inches = "tight")
-        return
-
-    def getDistPlot(self, array):
-        """Creates a seaborn-style distplot (similar to a histogram) for
-        single continuous variable queries."""
-        self.theDataSeries=self.continuousArrayToSeries(array)
-        f, ax = plt.subplots(figsize=(12, 6))
-        ax = sns.distplot(self.theDataSeries)
-        ax.set(xlabel=self.primary)
-        picture = ax.get_figure()
-        picture.savefig("static/output.png", bbox_inches = "tight")
+        picture.savefig("static/" + self.primary + "-" + 
+                        self.secondary + ".png", bbox_inches = "tight")
         return
 
     def getBarPlot(self, array):
@@ -355,25 +369,16 @@ class DataSource:
         # For that reason, this is temporarily using default arrays
         f, ax = plt.subplots(figsize=(12, 6))
         ax = sns.barplot(array[0], array[1])
-        ax.set(xlabel=self.primary, ylabel = "count")
+        description = self.descriptionDict[self.primary]
+        ax.set(xlabel=description, ylabel = "count")
         # Rotate labels
         for tick in ax.get_xticklabels():
             tick.set_rotation(90)
         # Add margin to bottom
         f.subplots_adjust(bottom=0.2)
         picture = ax.get_figure()
-        picture.savefig("static/" + self.primary + ".png", bbox_inches = "tight")     
-        
-    def categoricalArrayToSeries(self, array):
-        """Converts a 2-element list of lists (i.e. for a single variable
-        query) to a 1D pandas Series, where the data is categorical."""
-        # By convention in the rest of the code, the first row is the value
-        # labels, and the second row is the numbers of responses for each value
-        name = self.primary
-        values = array[0]
-        counts = array[1]
-        theSeries = pd.Series(data=counts, index=values, name=name)
-        return theSeries
+        picture.savefig("static/" + self.primary + ".png", bbox_inches = "tight")   
+
 
     def continuousArrayToSeries(self, array):
         """Converts a 2-element list of lists (i.e. for a single variable
